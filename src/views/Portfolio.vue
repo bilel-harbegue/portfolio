@@ -1,3 +1,4 @@
+
 <template>
 
   <main
@@ -104,60 +105,133 @@
         v-if="demoProjet"
         class="fixed inset-0
                z-[100]
-               bg-black/90
+               bg-black/95
                backdrop-blur-md
                flex items-center
                justify-center
-               p-4 md:p-6"
+               p-2 sm:p-4"
         @click.self="fermerDemo"
       >
 
+        <!-- ================= VIDEO CONTAINER ================= -->
+
         <div
           class="relative
-                 w-full max-w-5xl
-                 bg-[#08101f]
+                 w-full
+                 max-w-6xl
+                 max-h-[96vh]
+                 bg-[#050816]
                  border border-cyan-400/20
                  rounded-2xl
                  overflow-hidden
-                 shadow-[0_0_60px_rgba(34,211,238,.15)]"
+                 shadow-[0_0_80px_rgba(34,211,238,.18)]
+                 flex
+                 flex-col"
         >
 
-          <!-- Fermer -->
-          <button
-            @click="fermerDemo"
-            class="absolute
-                   top-4 right-4
-                   z-20
-                   w-10 h-10
-                   rounded-full
-                   bg-black/70
-                   text-white
-                   hover:bg-cyan-400
-                   hover:text-black
-                   transition"
-            aria-label="Fermer"
+          <!-- ================= HEADER ================= -->
+
+          <div
+            class="flex
+                   items-center
+                   justify-between
+                   gap-4
+                   px-5
+                   py-4
+                   bg-[#08101f]
+                   border-b
+                   border-white/10
+                   shrink-0"
           >
-            ✕
-          </button>
+
+            <div class="min-w-0">
+
+              <p class="text-cyan-400 text-xs font-medium">
+                Démonstration du projet
+              </p>
+
+              <h2
+                class="text-lg
+                       sm:text-xl
+                       font-bold
+                       truncate"
+              >
+                {{ demoProjet.titre }}
+              </h2>
+
+            </div>
 
 
-          <!-- Vidéo disponible -->
+            <!-- Bouton fermer -->
 
-          <video
+            <button
+              type="button"
+              @click="fermerDemo"
+              class="shrink-0
+                     w-10 h-10
+                     rounded-full
+                     bg-white/5
+                     border border-white/10
+                     text-gray-300
+                     flex items-center
+                     justify-center
+                     hover:bg-cyan-400
+                     hover:text-black
+                     hover:border-cyan-400
+                     transition"
+              aria-label="Fermer"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                class="w-5 h-5"
+              >
+                <path d="M6 6l12 12"/>
+                <path d="M18 6 6 18"/>
+              </svg>
+
+            </button>
+
+          </div>
+
+
+          <!-- ================= VIDEO ================= -->
+
+          <div
             v-if="demoProjet.video"
-            :src="demoProjet.video"
-            :poster="demoProjet.poster"
-            controls
-            autoplay
-            playsinline
-            class="w-full
-                   max-h-[75vh]
-                   bg-black"
-            @error="videoErreur"
-          ></video>
+            class="relative
+                   w-full
+                   bg-black
+                   flex
+                   items-center
+                   justify-center
+                   overflow-hidden"
+          >
+
+            <video
+              ref="videoElement"
+              :src="demoProjet.video"
+              :poster="demoProjet.poster"
+              controls
+              autoplay
+              playsinline
+              preload="metadata"
+              class="block
+                     w-full
+                     h-auto
+                     max-h-[calc(96vh-130px)]
+                     object-contain
+                     bg-black"
+              @error="videoErreur"
+            ></video>
+
+          </div>
 
 
-          <!-- Vidéo indisponible -->
+          <!-- ================= VIDEO UNAVAILABLE ================= -->
 
           <div
             v-else
@@ -201,6 +275,52 @@
 
           </div>
 
+
+          <!-- ================= FOOTER VIDEO ================= -->
+
+          <div
+            v-if="demoProjet.video"
+            class="px-5
+                   py-3
+                   bg-[#08101f]
+                   border-t
+                   border-white/10
+                   flex
+                   items-center
+                   justify-between
+                   gap-4
+                   shrink-0"
+          >
+
+            <p
+              class="text-xs
+                     sm:text-sm
+                     text-gray-500"
+            >
+              Démonstration vidéo
+            </p>
+
+            <span
+              class="hidden sm:inline-flex
+                     items-center
+                     gap-2
+                     text-xs
+                     text-cyan-400"
+            >
+
+              <span
+                class="w-2 h-2
+                       rounded-full
+                       bg-cyan-400
+                       shadow-[0_0_10px_#22d3ee]"
+              ></span>
+
+              Lecture
+
+            </span>
+
+          </div>
+
         </div>
 
       </div>
@@ -222,13 +342,14 @@
                backdrop-blur-md
                flex items-center
                justify-center
-               p-6"
+               p-4 sm:p-6"
         @click.self="fermerDetails"
       >
 
         <div
           class="relative
-                 w-full max-w-2xl
+                 w-full
+                 max-w-2xl
                  max-h-[85vh]
                  overflow-y-auto
                  bg-[#08101f]
@@ -240,6 +361,7 @@
           <!-- Fermer -->
 
           <button
+            type="button"
             @click="fermerDetails"
             class="absolute
                    top-5 right-5
@@ -247,11 +369,24 @@
                    rounded-full
                    bg-white/5
                    text-gray-400
+                   flex items-center
+                   justify-center
                    hover:text-white
                    hover:bg-cyan-400/10
                    transition"
           >
-            ✕
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              class="w-4 h-4"
+            >
+              <path d="M6 6l12 12"/>
+              <path d="M18 6 6 18"/>
+            </svg>
+
           </button>
 
 
@@ -325,7 +460,9 @@
               :key="info"
               class="text-sm
                      text-gray-400
-                     leading-relaxed"
+                     leading-relaxed
+                     mb-2
+                     last:mb-0"
             >
               {{ info }}
             </p>
@@ -336,6 +473,7 @@
           <!-- Voir la démonstration -->
 
           <button
+            type="button"
             @click="ouvrirDemo(detailsProjet)"
             class="mt-7
                    inline-flex
@@ -378,26 +516,45 @@
 
 <script setup>
 
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
 
-import ProjectCard from '../components/portfolio/ProjectCard.vue'
+import ProjectCard
+  from '../components/portfolio/ProjectCard.vue'
 
-import stagesImage from '../assets/images/1.png'
-import stagesVideo from '../assets/videos/2026-08-09 08-05-34.mp4'
+
+// =================================================
+// IMAGES
+// =================================================
+
+import stagesImage
+  from '../assets/images/img1.png'
+
+import stagesVideo
+  from '../assets/videos/gest_stage.mp4'
+
+
+import stagesImage2
+  from '../assets/images/img2.png'
+
+import stagesVideo2
+  from '../assets/videos/gest_fiche.mp4'
+
+
+import stagesImage3
+  from '../assets/images/img3.png'
+
+import stagesVideo3
+  from '../assets/videos/port.mp4'
 
 
 // =================================================
 // PROJETS
 // =================================================
-//
-// Les informations de chaque projet sont regroupées
-// ici afin de garder Portfolio.vue simple à gérer.
-// =================================================
 
 const projets = [
 
   // =================================================
-  // PROJET 1 : PFE
+  // PROJET 1
   // =================================================
 
   {
@@ -414,6 +571,7 @@ const projets = [
       'Projet de Fin d’Études réalisé au Centre National d’Informatique (CNI) en 2025. Le projet a été développé en binôme et consiste à concevoir une plateforme web permettant de centraliser et simplifier la gestion des stages. L’application permet de gérer les étudiants, les entreprises, les offres de stage, les utilisateurs et les rôles. Une partie du processus d’affectation et du traitement des informations a également été automatisée avec une assistance basée sur l’intelligence artificielle développée en Python.',
 
     infos: [
+
       'Projet de Fin d’Études réalisé en binôme.',
 
       'Lieu : Centre National d’Informatique (CNI).',
@@ -421,15 +579,21 @@ const projets = [
       'Durée : 4 mois en 2025.',
 
       'Python a été utilisé pour la partie Intelligence Artificielle.'
+
     ],
 
     technologies: [
+
       'Vue.js',
+
       'Spring Boot',
+
       'Tailwind CSS',
+
       'PostgreSQL',
-      'Python',
-      'IA'
+
+      'Python'
+
     ],
 
     poster: stagesImage,
@@ -437,11 +601,12 @@ const projets = [
     video: stagesVideo,
 
     github: ''
+
   },
 
 
   // =================================================
-  // PROJET 2 : VIKASPACE
+  // PROJET 2
   // =================================================
 
   {
@@ -458,6 +623,7 @@ const projets = [
       'Application web développée durant mon stage de perfectionnement chez Vikaspace en 2024. Le projet avait pour objectif de faciliter la gestion des fichiers au sein de l’application. J’ai participé au développement des fonctionnalités CRUD ainsi qu’à la gestion des utilisateurs et de leurs permissions. Un tableau de bord administrateur permet également de centraliser la gestion des données et des utilisateurs.',
 
     infos: [
+
       'Stage de perfectionnement réalisé chez Vikaspace.',
 
       'Durée : 1 mois en 2024.',
@@ -465,26 +631,34 @@ const projets = [
       'Travail sur une application web de gestion de fichiers.',
 
       'Participation au développement des fonctionnalités CRUD et de la gestion des utilisateurs.'
+
     ],
 
     technologies: [
+
       'HTML',
+
       'CSS',
+
       'JavaScript',
+
       'PHP',
+
       'SQL'
+
     ],
 
-    poster: '/images/files-management.jpg',
+    poster: stagesImage2,
 
-    video: '/videos/files-management.mp4',
+    video: stagesVideo2,
 
     github: ''
+
   },
 
 
   // =================================================
-  // PROJET 3 : PORTFOLIO
+  // PROJET 3
   // =================================================
 
   {
@@ -501,6 +675,7 @@ const projets = [
       'Portfolio personnel développé avec Vue.js 3, Vite et Tailwind CSS. Le site utilise une interface moderne inspirée des designs Web3 avec un thème sombre, des effets lumineux, des animations et une architecture organisée en plusieurs pages. L’objectif est de présenter mon profil, mes compétences, mes expériences et mes projets de manière claire et professionnelle.',
 
     infos: [
+
       'Projet personnel développé pour présenter mon profil professionnel.',
 
       'Architecture basée sur Vue.js 3 et Vue Router.',
@@ -508,20 +683,27 @@ const projets = [
       'Interface responsive adaptée aux différentes tailles d’écran.',
 
       'Design moderne basé principalement sur Tailwind CSS.'
+
     ],
 
     technologies: [
+
       'Vue.js 3',
+
       'Vite',
+
       'Tailwind CSS',
+
       'JavaScript'
+
     ],
 
-    poster: '/images/portfolio.jpg',
+    poster: stagesImage3,
 
-    video: '/videos/portfolio-demo.mp4',
+    video: stagesVideo3,
 
     github: ''
+
   }
 
 ]
@@ -533,19 +715,55 @@ const projets = [
 
 const demoProjet = ref(null)
 
+const videoElement = ref(null)
 
-// Ouvrir la démonstration
-const ouvrirDemo = (projet) => {
+
+// =================================================
+// OUVRIR DEMO
+// =================================================
+
+const ouvrirDemo = async (projet) => {
 
   detailsProjet.value = null
 
   demoProjet.value = projet
 
+  await nextTick()
+
+  if (videoElement.value) {
+
+    try {
+
+      videoElement.value.currentTime = 0
+
+      await videoElement.value.play()
+
+    } catch (error) {
+
+      console.warn(
+        'Lecture automatique bloquée par le navigateur.'
+      )
+
+    }
+
+  }
+
 }
 
 
-// Fermer la démonstration
+// =================================================
+// FERMER DEMO
+// =================================================
+
 const fermerDemo = () => {
+
+  if (videoElement.value) {
+
+    videoElement.value.pause()
+
+    videoElement.value.currentTime = 0
+
+  }
 
   demoProjet.value = null
 
@@ -559,7 +777,10 @@ const fermerDemo = () => {
 const detailsProjet = ref(null)
 
 
-// Ouvrir les détails
+// =================================================
+// OUVRIR DETAILS
+// =================================================
+
 const ouvrirDetails = (projet) => {
 
   detailsProjet.value = projet
@@ -567,7 +788,10 @@ const ouvrirDetails = (projet) => {
 }
 
 
-// Fermer les détails
+// =================================================
+// FERMER DETAILS
+// =================================================
+
 const fermerDetails = () => {
 
   detailsProjet.value = null
@@ -592,15 +816,16 @@ const videoErreur = () => {
 
 <style scoped>
 
-/*
-  Animation simple pour les fenêtres
-  de détails et de démonstration.
-*/
+/* ================================================= */
+/* MODAL */
+/* ================================================= */
 
 .modal-enter-active,
 .modal-leave-active {
 
-  transition: .3s;
+  transition:
+    opacity .3s ease,
+    transform .3s ease;
 
 }
 
@@ -610,8 +835,58 @@ const videoErreur = () => {
 
   opacity: 0;
 
-  transform: scale(.95);
+  transform: scale(.96);
+
+}
+
+
+/* ================================================= */
+/* VIDEO */
+/* ================================================= */
+
+video {
+
+  /*
+   * Empêche la vidéo de perdre ses proportions.
+   */
+
+  aspect-ratio: auto;
+
+}
+
+
+/* ================================================= */
+/* SCROLLBAR DETAILS */
+/* ================================================= */
+
+::-webkit-scrollbar {
+
+  width: 6px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+  background: transparent;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+  background: rgba(34, 211, 238, .25);
+
+  border-radius: 999px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+  background: rgba(34, 211, 238, .5);
 
 }
 
 </style>
+```

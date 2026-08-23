@@ -45,16 +45,19 @@
                      text-lg leading-relaxed"
             >
               Diplômé en Licence Appliquée en Technologies de l’Information,
-              passionné par le développement web et les technologies numériques.
-              Expérience acquise à travers des stages, des projets académiques
-              et une formation Full Stack.
+              actuellement en Cycle d’Ingénieur en Informatique.
+              Passionné par le développement web et les technologies numériques,
+              avec une expérience acquise à travers des stages, des projets
+              académiques et une formation Full Stack.
             </p>
 
             <div class="flex flex-wrap gap-4 mt-8">
 
+              <!-- Télécharger CV -->
+
               <a
-                href="/cv.pdf"
-                download
+                :href="cvPDF"
+                download="Bilel_Harbegue_CV.pdf"
                 class="px-7 py-3 rounded-full
                        bg-gradient-to-r from-cyan-400 to-violet-500
                        font-semibold transition
@@ -63,6 +66,8 @@
               >
                 Télécharger mon CV
               </a>
+
+              <!-- Contact -->
 
               <RouterLink
                 to="/contact"
@@ -80,6 +85,7 @@
 
           </div>
 
+
           <!-- PROFILE -->
 
           <div
@@ -94,8 +100,10 @@
 
             <div
               class="w-16 h-16 flex items-center justify-center mb-6
-                     rounded-2xl bg-cyan-400/10
-                     border border-cyan-400/20 text-cyan-400"
+                     rounded-2xl
+                     bg-cyan-400/10
+                     border border-cyan-400/20
+                     text-cyan-400"
             >
 
               <svg
@@ -112,7 +120,7 @@
             </div>
 
             <h2 class="text-2xl font-bold">
-              Développeur Web
+              Harbegue Bilel
             </h2>
 
             <p class="text-cyan-400 mt-2">
@@ -120,30 +128,53 @@
             </p>
 
             <div
-              class="h-px my-6 bg-gradient-to-r
-                     from-transparent via-cyan-400/40 to-transparent"
+              class="h-px my-6
+                     bg-gradient-to-r
+                     from-transparent
+                     via-cyan-400/40
+                     to-transparent"
             ></div>
 
             <div class="space-y-4 text-sm">
 
               <div class="flex justify-between gap-4">
-                <span class="text-gray-500">Formation</span>
-                <span>Licence IT</span>
+                <span class="text-gray-500">
+                  Formation
+                </span>
+
+                <span>
+                  Cycle d’Ingénieur
+                </span>
               </div>
 
               <div class="flex justify-between gap-4">
-                <span class="text-gray-500">Spécialité</span>
-                <span>Développement Web</span>
+                <span class="text-gray-500">
+                  Spécialité
+                </span>
+
+                <span>
+                  Développement Web
+                </span>
               </div>
 
               <div class="flex justify-between gap-4">
-                <span class="text-gray-500">Expérience</span>
-                <span>Stages & Projets</span>
+                <span class="text-gray-500">
+                  Expérience
+                </span>
+
+                <span>
+                  Stages & Projets
+                </span>
               </div>
 
               <div class="flex justify-between gap-4">
-                <span class="text-gray-500">Localisation</span>
-                <span>Tunisie</span>
+                <span class="text-gray-500">
+                  Localisation
+                </span>
+
+                <span>
+                  Tunisie
+                </span>
               </div>
 
             </div>
@@ -165,12 +196,27 @@
 
       <div class="max-w-6xl mx-auto px-6">
 
-        <SectionTitle
-          subtitle="Mon parcours académique"
-          title="Formation"
-        />
+        <!-- TITRE -->
 
-        <div class="mt-14 space-y-6">
+        <div class="text-center mb-14">
+
+          <p class="text-cyan-400 text-sm font-medium mb-2">
+            Mon parcours académique
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-extrabold">
+            Formation & Parcours académique
+          </h2>
+
+          <div
+            class="w-20 h-1 mx-auto mt-5 rounded-full
+                   bg-gradient-to-r from-cyan-400 to-violet-500"
+          ></div>
+
+        </div>
+
+
+        <div class="space-y-6">
 
           <div
             v-for="formation in formations"
@@ -179,9 +225,12 @@
           >
 
             <span
-              class="absolute -left-[7px] top-7 w-3 h-3 rounded-full
-                     bg-cyan-400 shadow-[0_0_15px_#22d3ee]"
+              class="absolute -left-[7px] top-7
+                     w-3 h-3 rounded-full
+                     bg-cyan-400
+                     shadow-[0_0_15px_#22d3ee]"
             ></span>
+
 
             <div
               class="p-7 rounded-2xl
@@ -209,6 +258,7 @@
 
               </div>
 
+
               <h3 class="text-xl font-bold mt-4">
                 {{ formation.title }}
               </h3>
@@ -216,6 +266,7 @@
               <p class="text-cyan-300/80 mt-2">
                 {{ formation.place }}
               </p>
+
 
               <Transition name="details">
 
@@ -227,9 +278,13 @@
                   <div class="flex gap-3">
 
                     <div
-                      class="w-8 h-8 shrink-0 flex items-center justify-center
-                             rounded-lg bg-cyan-400/10 text-cyan-400"
+                      class="w-8 h-8 shrink-0
+                             flex items-center justify-center
+                             rounded-lg
+                             bg-cyan-400/10
+                             text-cyan-400"
                     >
+
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
@@ -241,6 +296,7 @@
                         <path d="M12 11v5"/>
                         <path d="M12 8h.01"/>
                       </svg>
+
                     </div>
 
                     <p class="text-gray-400 leading-relaxed">
@@ -249,14 +305,53 @@
 
                   </div>
 
+
+                  <!-- CERTIFICAT -->
+
+                  <a
+                    v-if="formation.certificate"
+                    :href="formation.certificate"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 mt-5
+                           px-4 py-2 rounded-lg
+                           border border-cyan-400/20
+                           bg-cyan-400/5
+                           text-cyan-400 text-sm
+                           transition
+                           hover:bg-cyan-400/10
+                           hover:border-cyan-400/40"
+                  >
+
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      class="w-4 h-4"
+                    >
+                      <path
+                        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                      />
+
+                      <path d="M14 2v6h6"/>
+                      <path d="M8 13h8"/>
+                      <path d="M8 17h5"/>
+                    </svg>
+
+                    Voir le certificat PDF
+
+                  </a>
+
                 </div>
 
               </Transition>
 
+
               <button
                 type="button"
                 @click="toggleFormation(formation)"
-                class="mt-6 flex items-center gap-2
+                class="mt-6 group flex items-center gap-2
                        text-cyan-400 text-sm font-medium
                        hover:text-cyan-300 transition"
               >
@@ -290,100 +385,35 @@
 
 
     <!-- ================================================= -->
-    <!-- CERTIFICATIONS -->
+    <!-- EXPERIENCES -->
     <!-- ================================================= -->
 
     <section class="py-20 bg-[#060a19]">
 
       <div class="max-w-6xl mx-auto px-6">
 
-        <SectionTitle
-          subtitle="Certificats & formations"
-          title="Certifications"
-        />
+        <div class="text-center mb-14">
 
-        <div class="grid md:grid-cols-2 gap-6 mt-14">
+          <p class="text-cyan-400 text-sm font-medium mb-2">
+            Mon expérience professionnelle
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-extrabold">
+            Expériences professionnelles
+          </h2>
 
           <div
-            v-for="certificate in certificates"
-            :key="certificate.title"
-            class="group p-7 rounded-2xl
-                   bg-[#08101f]/75
-                   border border-cyan-400/10
-                   transition duration-300
-                   hover:-translate-y-2
-                   hover:border-cyan-400/30"
-          >
-
-            <div class="flex items-start gap-5">
-
-              <div
-                class="w-14 h-14 shrink-0
-                       flex items-center justify-center
-                       rounded-2xl
-                       bg-cyan-400/10
-                       border border-cyan-400/15
-                       text-cyan-400"
-              >
-
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.7"
-                  class="w-7 h-7"
-                >
-                  <path d="M7 3h10a2 2 0 0 1 2 2v14l-7-3-7 3V5a2 2 0 0 1 2-2Z"/>
-                  <path d="m9 10 2 2 4-4"/>
-                </svg>
-
-              </div>
-
-              <div>
-
-                <span class="text-cyan-400 text-xs font-semibold">
-                  {{ certificate.date }}
-                </span>
-
-                <h3 class="text-xl font-bold mt-2">
-                  {{ certificate.title }}
-                </h3>
-
-                <p class="text-cyan-300/80 mt-2">
-                  {{ certificate.organization }}
-                </p>
-
-                <p class="text-gray-400 text-sm leading-relaxed mt-4">
-                  {{ certificate.description }}
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
+            class="w-20 h-1 mx-auto mt-5 rounded-full
+                   bg-gradient-to-r from-cyan-400 to-violet-500"
+          ></div>
 
         </div>
 
-      </div>
 
-    </section>
-
-
-    <!-- ================================================= -->
-    <!-- EXPERIENCES / STAGES -->
-    <!-- ================================================= -->
-
-    <section class="py-20">
-
-      <div class="max-w-6xl mx-auto px-6">
-
-        <SectionTitle
-          subtitle="Mes stages & expériences"
-          title="Expériences"
-        />
-
-        <div class="grid lg:grid-cols-2 gap-6 mt-14">
+        <div
+          class="grid lg:grid-cols-2 gap-6
+                 items-start"
+        >
 
           <div
             v-for="experience in experiences"
@@ -408,6 +438,7 @@
 
             </div>
 
+
             <h3 class="text-2xl font-bold mt-5">
               {{ experience.title }}
             </h3>
@@ -415,6 +446,14 @@
             <p class="text-cyan-300 mt-2">
               {{ experience.company }}
             </p>
+
+            <p
+              v-if="experience.role"
+              class="text-gray-500 text-sm mt-3"
+            >
+              {{ experience.role }}
+            </p>
+
 
             <Transition name="details">
 
@@ -426,6 +465,7 @@
                 <p class="text-gray-400 leading-relaxed">
                   {{ experience.description }}
                 </p>
+
 
                 <div class="flex flex-wrap gap-2 mt-5">
 
@@ -442,14 +482,36 @@
 
                 </div>
 
+
+                <RouterLink
+                  to="/portfolio"
+                  class="mt-7
+                         inline-flex
+                         items-center
+                         gap-2
+                         px-5 py-2.5
+                         rounded-full
+                         bg-gradient-to-r
+                         from-cyan-400
+                         to-violet-500
+                         text-[#050816]
+                         font-semibold
+                         text-sm
+                         hover:scale-105
+                         transition"
+                >
+                  Voir le projet
+                </RouterLink>
+
               </div>
 
             </Transition>
 
+
             <button
               type="button"
               @click="toggleExperience(experience)"
-              class="mt-6 flex items-center gap-2
+              class="mt-6 group flex items-center gap-2
                      text-cyan-400 text-sm font-medium
                      hover:text-cyan-300 transition"
             >
@@ -466,7 +528,7 @@
                 class="w-4 h-4 transition-transform duration-300"
                 :class="experience.open ? 'rotate-180' : ''"
               >
-                <path d="m6 9 6 6 6-6"/>
+                <path d="m6 9 6 6-6"/>
               </svg>
 
             </button>
@@ -484,16 +546,29 @@
     <!-- COMPETENCES -->
     <!-- ================================================= -->
 
-    <section class="py-20 bg-[#060a19]">
+    <section class="py-20">
 
       <div class="max-w-6xl mx-auto px-6">
 
-        <SectionTitle
-          subtitle="Technologies & outils"
-          title="Compétences Techniques"
-        />
+        <div class="text-center mb-14">
 
-        <div class="grid md:grid-cols-2 gap-6 mt-14">
+          <p class="text-cyan-400 text-sm font-medium mb-2">
+            Technologies & outils
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-extrabold">
+            Compétences techniques
+          </h2>
+
+          <div
+            class="w-20 h-1 mx-auto mt-5 rounded-full
+                   bg-gradient-to-r from-cyan-400 to-violet-500"
+          ></div>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-2 gap-6">
 
           <div
             v-for="skill in skills"
@@ -508,68 +583,100 @@
 
             <div class="flex items-center gap-4 mb-6">
 
+              <!-- FRONTEND -->
+
               <div
-                class="w-12 h-12 shrink-0
-                       flex items-center justify-center
-                       rounded-xl
+                v-if="skill.icon === 'frontend'"
+                class="w-14 h-14 flex items-center justify-center
+                       rounded-2xl
                        bg-cyan-400/10
                        border border-cyan-400/15
                        text-cyan-400"
               >
 
-                <!-- FRONTEND -->
-
                 <svg
-                  v-if="skill.icon === 'frontend'"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.7"
-                  class="w-6 h-6"
+                  class="w-7 h-7"
                 >
                   <rect x="3" y="4" width="18" height="14" rx="2"/>
                   <path d="M8 21h8M12 18v3"/>
                 </svg>
 
-                <!-- BACKEND -->
+              </div>
+
+
+              <!-- BACKEND -->
+
+              <div
+                v-else-if="skill.icon === 'backend'"
+                class="w-14 h-14 flex items-center justify-center
+                       rounded-2xl
+                       bg-cyan-400/10
+                       border border-cyan-400/15
+                       text-cyan-400"
+              >
 
                 <svg
-                  v-else-if="skill.icon === 'backend'"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.7"
-                  class="w-6 h-6"
+                  class="w-7 h-7"
                 >
                   <rect x="4" y="4" width="16" height="6" rx="2"/>
                   <rect x="4" y="14" width="16" height="6" rx="2"/>
                   <path d="M8 7h.01M8 17h.01"/>
                 </svg>
 
-                <!-- DATABASE -->
+              </div>
+
+
+              <!-- DATABASE -->
+
+              <div
+                v-else-if="skill.icon === 'database'"
+                class="w-14 h-14 flex items-center justify-center
+                       rounded-2xl
+                       bg-cyan-400/10
+                       border border-cyan-400/15
+                       text-cyan-400"
+              >
 
                 <svg
-                  v-else-if="skill.icon === 'database'"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.7"
-                  class="w-6 h-6"
+                  class="w-7 h-7"
                 >
                   <ellipse cx="12" cy="5" rx="8" ry="3"/>
                   <path d="M4 5v7c0 2 3.6 3 8 3s8-1 8-3V5"/>
                   <path d="M4 12v7c0 2 3.6 3 8 3s8-1 8-3v-7"/>
                 </svg>
 
-                <!-- TOOLS -->
+              </div>
+
+
+              <!-- TOOLS -->
+
+              <div
+                v-else
+                class="w-14 h-14 flex items-center justify-center
+                       rounded-2xl
+                       bg-cyan-400/10
+                       border border-cyan-400/15
+                       text-cyan-400"
+              >
 
                 <svg
-                  v-else
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.7"
-                  class="w-6 h-6"
+                  class="w-7 h-7"
                 >
                   <path
                     d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2.2-2.2 2.1-2.1Z"
@@ -577,6 +684,7 @@
                 </svg>
 
               </div>
+
 
               <div>
 
@@ -592,7 +700,6 @@
 
             </div>
 
-            <!-- TECHNOLOGIES -->
 
             <div class="flex flex-wrap gap-2">
 
@@ -624,16 +731,29 @@
     <!-- QUALITES -->
     <!-- ================================================= -->
 
-    <section class="py-20">
+    <section class="py-20 bg-[#060a19]">
 
       <div class="max-w-6xl mx-auto px-6">
 
-        <SectionTitle
-          subtitle="Mes points forts"
-          title="Qualités Professionnelles"
-        />
+        <div class="text-center mb-14">
 
-        <div class="grid md:grid-cols-3 gap-5 mt-14">
+          <p class="text-cyan-400 text-sm font-medium mb-2">
+            Mes points forts
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-extrabold">
+            Qualités professionnelles
+          </h2>
+
+          <div
+            class="w-20 h-1 mx-auto mt-5 rounded-full
+                   bg-gradient-to-r from-cyan-400 to-violet-500"
+          ></div>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-3 gap-5">
 
           <div
             v-for="quality in qualities"
@@ -668,6 +788,7 @@
                 <path d="M11 8v6M8 11h6"/>
               </svg>
 
+
               <svg
                 v-else-if="quality.icon === 'team'"
                 viewBox="0 0 24 24"
@@ -681,6 +802,7 @@
                 <path d="M3 20c0-3.5 2.5-6 6-6s6 2.5 6 6"/>
                 <path d="M15 15c3 0 5 2 5 5"/>
               </svg>
+
 
               <svg
                 v-else
@@ -700,7 +822,10 @@
               {{ quality.title }}
             </h3>
 
-            <p class="text-gray-400 text-sm leading-relaxed mt-3">
+            <p
+              class="text-gray-400 text-sm
+                     leading-relaxed mt-3"
+            >
               {{ quality.description }}
             </p>
 
@@ -717,29 +842,40 @@
     <!-- LANGUES -->
     <!-- ================================================= -->
 
-    <section class="py-20 bg-[#060a19]">
+    <section class="py-20">
 
       <div class="max-w-6xl mx-auto px-6">
 
-        <SectionTitle
-          subtitle="Communication"
-          title="Langues"
-        />
+        <div class="text-center mb-14">
 
-        <div class="grid md:grid-cols-3 gap-6 mt-14">
+          <p class="text-cyan-400 text-sm font-medium mb-2">
+            Communication
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-extrabold">
+            Langues
+          </h2>
+
+          <div
+            class="w-20 h-1 mx-auto mt-5 rounded-full
+                   bg-gradient-to-r from-cyan-400 to-violet-500"
+          ></div>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-3 gap-6">
 
           <div
             v-for="language in languages"
             :key="language.name"
-            class="relative p-7 rounded-[22px]
-                   bg-gradient-to-br
-                   from-[#08101f]/85 to-[#08101f]/65
+            class="relative overflow-hidden
+                   group p-7 rounded-2xl
+                   bg-[#08101f]/70
                    border border-cyan-400/10
-                   overflow-hidden
                    transition duration-300
                    hover:-translate-y-2
-                   hover:border-cyan-400/35
-                   hover:shadow-[0_0_35px_rgba(34,211,238,.06)]"
+                   hover:border-cyan-400/30"
           >
 
             <div
@@ -750,14 +886,18 @@
 
             <div class="relative">
 
-              <div class="flex items-center justify-between gap-3">
+              <div
+                class="flex items-center
+                       justify-between gap-3"
+              >
 
                 <h3 class="text-xl font-bold">
                   {{ language.name }}
                 </h3>
 
                 <span
-                  class="text-xs px-3 py-1 rounded-full
+                  class="text-xs px-3 py-1
+                         rounded-full
                          bg-cyan-400/10
                          text-cyan-300
                          border border-cyan-400/10"
@@ -786,18 +926,31 @@
     <!-- CENTRES D'INTERET -->
     <!-- ================================================= -->
 
-    <section class="py-20">
+    <section class="py-20 bg-[#060a19]">
 
       <div class="max-w-6xl mx-auto px-6">
 
-        <SectionTitle
-          subtitle="Au-delà du développement"
-          title="Centres d’intérêt"
-        />
+        <div class="text-center mb-14">
+
+          <p class="text-cyan-400 text-sm font-medium mb-2">
+            Au-delà du développement
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-extrabold">
+            Centres d’intérêt
+          </h2>
+
+          <div
+            class="w-20 h-1 mx-auto mt-5 rounded-full
+                   bg-gradient-to-r from-cyan-400 to-violet-500"
+          ></div>
+
+        </div>
+
 
         <div
-          class="grid sm:grid-cols-2 lg:grid-cols-4
-                 gap-5 mt-14"
+          class="grid sm:grid-cols-2
+                 lg:grid-cols-4 gap-5"
         >
 
           <div
@@ -816,7 +969,8 @@
                      flex items-center justify-center
                      bg-cyan-400/10
                      border border-cyan-400/15
-                     text-cyan-400 mb-5"
+                     text-cyan-400
+                     mb-5"
             >
 
               <svg
@@ -831,6 +985,7 @@
                 <path d="m20 20-4-4"/>
               </svg>
 
+
               <svg
                 v-else-if="interest.icon === 'code'"
                 viewBox="0 0 24 24"
@@ -844,6 +999,7 @@
                 <path d="m14 5-4 14"/>
               </svg>
 
+
               <svg
                 v-else-if="interest.icon === 'idea'"
                 viewBox="0 0 24 24"
@@ -855,9 +1011,12 @@
                 <path d="M9 18h6"/>
                 <path d="M10 22h4"/>
                 <path
-                  d="M8 14a6 6 0 1 1 8 0c-1 1-2 2-2 4H10c0-2-1-3-2-4Z"
+                  d="M8 14a6 6 0 1 1 8 0
+                     c-1 1-2 2-2 4H10
+                     c0-2-1-3-2-4Z"
                 />
               </svg>
+
 
               <svg
                 v-else
@@ -874,11 +1033,15 @@
 
             </div>
 
+
             <h3 class="font-bold">
               {{ interest.title }}
             </h3>
 
-            <p class="text-gray-500 text-sm mt-2 leading-relaxed">
+            <p
+              class="text-gray-500 text-sm
+                     mt-2 leading-relaxed"
+            >
               {{ interest.description }}
             </p>
 
@@ -895,12 +1058,13 @@
     <!-- CTA -->
     <!-- ================================================= -->
 
-    <section class="py-20 bg-[#060a19]">
+    <section class="py-20">
 
       <div class="max-w-4xl mx-auto px-6">
 
         <div
-          class="relative text-center p-10 md:p-14
+          class="relative text-center
+                 p-10 md:p-14
                  rounded-3xl
                  bg-[#08101f]/80
                  border border-cyan-400/20
@@ -909,11 +1073,13 @@
         >
 
           <div
-            class="absolute -top-20 left-1/2 -translate-x-1/2
+            class="absolute -top-20 left-1/2
+                   -translate-x-1/2
                    w-72 h-40
                    bg-cyan-400/10
                    rounded-full blur-[80px]"
           ></div>
+
 
           <div class="relative z-10">
 
@@ -927,7 +1093,8 @@
 
               <span
                 class="text-transparent bg-clip-text
-                       bg-gradient-to-r from-cyan-400 to-violet-500"
+                       bg-gradient-to-r
+                       from-cyan-400 to-violet-500"
               >
                 ensemble.
               </span>
@@ -941,8 +1108,10 @@
 
             <RouterLink
               to="/contact"
-              class="inline-flex mt-8 px-7 py-3 rounded-full
-                     bg-gradient-to-r from-cyan-400 to-violet-500
+              class="inline-flex mt-8 px-7 py-3
+                     rounded-full
+                     bg-gradient-to-r
+                     from-cyan-400 to-violet-500
                      font-semibold transition
                      hover:scale-105
                      hover:shadow-[0_0_30px_#22d3ee]"
@@ -969,6 +1138,31 @@ import { RouterLink } from 'vue-router'
 
 
 /* ================================================= */
+/* PDF FILES */
+/* ================================================= */
+
+/*
+  Les fichiers sont dans :
+
+  src/assets/certificates/
+
+  On les importe ici pour que Vite
+  gère correctement les chemins.
+*/
+
+import cvPDF from '../assets/certificates/bilel_harbegue.pdf'
+import fullStackPDF from '../assets/certificates/full-stack.pdf'
+
+// Si tu as ces fichiers, tu peux aussi les importer.
+// Pour l'instant ils restent commentés.
+
+/*
+import licencePDF from '../assets/certificates/licence.pdf'
+import bacPDF from '../assets/certificates/bac.pdf'
+*/
+
+
+/* ================================================= */
 /* FORMATION */
 /* ================================================= */
 
@@ -976,34 +1170,96 @@ const formations = ref([
 
   {
     id: 1,
-    date: '2022 — 2025',
-    type: 'Licence',
-    title: 'Licence Appliquée en Technologies de l’Information',
-    place: 'Institut Supérieur des Études Technologiques de Zaghouan',
+
+    date: '2026 — Aujourd’hui',
+
+    type: 'Cycle d’Ingénieur',
+
+    title: 'Cycle d’Ingénieur en Informatique',
+
+    place: 'Université SESAME — Tunisie',
+
     description:
-      'Formation orientée vers les technologies de l’information, le développement logiciel, les bases de données et la conception d’applications.',
+      'Poursuite des études en Cycle d’Ingénieur en Informatique, avec un approfondissement des compétences en développement logiciel et technologies numériques.',
+
+    certificate: null,
+
     open: false
   },
+
 
   {
     id: 2,
-    date: '2026',
-    type: 'Formation',
-    title: 'Développement Web Full Stack',
-    place: 'Master Class Tunisie — 5 mois',
+
+    date: '2022 — 2025',
+
+    type: 'Licence',
+
+    title:
+      'Licence Appliquée en Technologies de l’Information',
+
+    place:
+      'Institut Supérieur des Études Technologiques de Zaghouan',
+
     description:
-      'Formation pratique en développement frontend, backend, bases de données et conception d’applications web.',
+      'Formation orientée vers les technologies de l’information, le développement logiciel, les bases de données et la conception d’applications.',
+
+    /*
+      Pour le moment pas de PDF associé.
+      Si tu as licence.pdf, on pourra l'ajouter.
+    */
+
+    certificate: null,
+
     open: false
   },
 
+
   {
     id: 3,
+
+    date: '2026',
+
+    type: 'Formation',
+
+    title:
+      'Développement Web Full Stack',
+
+    place:
+      'Master Class Tunisie — 5 mois',
+
+    description:
+      'Formation pratique en développement frontend, backend, bases de données et conception d’applications web.',
+
+    certificate: fullStackPDF,
+
+    open: false
+  },
+
+
+  {
+    id: 4,
+
     date: '2022',
+
     type: 'Baccalauréat',
-    title: 'Baccalauréat Sciences de l’Informatique',
-    place: 'Lycée Abou Al Kacem Chabbi',
+
+    title:
+      'Baccalauréat Sciences de l’Informatique',
+
+    place:
+      'Lycée Abou Al Kacem Chabbi',
+
     description:
       'Formation secondaire spécialisée en informatique et technologies numériques.',
+
+    /*
+      Pour le moment pas de PDF associé.
+      Si tu as bac.pdf, on pourra l'ajouter.
+    */
+
+    certificate: null,
+
     open: false
   }
 
@@ -1011,66 +1267,71 @@ const formations = ref([
 
 
 /* ================================================= */
-/* CERTIFICATIONS */
-/* ================================================= */
-
-const certificates = [
-
-  {
-    date: '2026',
-    title: 'Développement Web Full Stack',
-    organization: 'Master Class Tunisie',
-    description:
-      'Certification obtenue après une formation pratique de 5 mois en développement web Full Stack, couvrant le frontend, le backend, les bases de données et la conception d’applications web.'
-  }
-
-]
-
-
-/* ================================================= */
-/* TOGGLE */
+/* TOGGLE FORMATION */
 /* ================================================= */
 
 const toggleFormation = (formation) => {
-  formation.open = !formation.open
-}
 
-const toggleExperience = (experience) => {
-  experience.open = !experience.open
+  formation.open = !formation.open
+
 }
 
 
 /* ================================================= */
-/* EXPERIENCES / STAGES */
+/* EXPERIENCES */
 /* ================================================= */
 
 const experiences = ref([
 
   {
     id: 1,
+
     number: '01',
+
     date: '2024 · 1 mois',
-    title: 'Stagiaire Développeur Web',
-    company: 'Vikaspace',
+
+    title:
+      'Stagiaire Développeur Web',
+
+    company:
+      'Vikaspace',
+
+    role:
+      'Développement web',
+
     description:
-      'Développement d’une application web de gestion de fichiers avec fonctionnalités CRUD, gestion des utilisateurs, permissions et tableau de bord administrateur.',
+      'Participation au développement d’une application web de gestion de fichiers avec fonctionnalités CRUD, gestion des utilisateurs, permissions et tableau de bord administrateur.',
+
     technologies: [
       'HTML',
       'CSS',
       'JavaScript',
       'PHP'
     ],
+
     open: false
   },
 
+
   {
     id: 2,
+
     number: '02',
+
     date: '2025 · 4 mois',
-    title: 'Projet de Fin d’Études',
-    company: 'Centre National d’Informatique — CNI',
+
+    title:
+      'Projet de Fin d’Études — Travail en binôme',
+
+    company:
+      'Centre National d’Informatique — CNI',
+
+    role:
+      'Focus principal : Frontend',
+
     description:
-      'Conception et développement d’une plateforme web intelligente de gestion des stages avec gestion des utilisateurs et des rôles. Automatisation du traitement et de l’affectation des stagiaires avec assistance par intelligence artificielle.',
+      'Conception et développement, en collaboration avec un autre développeur, d’une plateforme web intelligente de gestion des stages. J’ai principalement pris en charge la conception et le développement du Frontend, l’intégration avec les API Backend et l’interface utilisateur. Le projet intègre également l’automatisation du traitement et de l’affectation des stagiaires avec assistance par intelligence artificielle.',
+
     technologies: [
       'Vue.js',
       'Spring Boot',
@@ -1078,10 +1339,22 @@ const experiences = ref([
       'Python',
       'IA'
     ],
+
     open: false
   }
 
 ])
+
+
+/* ================================================= */
+/* TOGGLE EXPERIENCE */
+/* ================================================= */
+
+const toggleExperience = (experience) => {
+
+  experience.open = !experience.open
+
+}
 
 
 /* ================================================= */
@@ -1092,8 +1365,12 @@ const skills = [
 
   {
     title: 'Front-end',
+
     icon: 'frontend',
-    level: 'Interface & expérience utilisateur',
+
+    level:
+      'Interface & expérience utilisateur',
+
     items: [
       'HTML',
       'CSS',
@@ -1103,10 +1380,15 @@ const skills = [
     ]
   },
 
+
   {
     title: 'Back-end',
+
     icon: 'backend',
-    level: 'API & logique serveur',
+
+    level:
+      'API & logique serveur',
+
     items: [
       'PHP',
       'Django',
@@ -1115,10 +1397,15 @@ const skills = [
     ]
   },
 
+
   {
     title: 'Bases de données',
+
     icon: 'database',
-    level: 'Gestion & conception',
+
+    level:
+      'Gestion & conception',
+
     items: [
       'MySQL',
       'PostgreSQL',
@@ -1126,10 +1413,15 @@ const skills = [
     ]
   },
 
+
   {
     title: 'Outils & Workflow',
+
     icon: 'tools',
-    level: 'Développement & collaboration',
+
+    level:
+      'Développement & collaboration',
+
     items: [
       'Git',
       'GitHub',
@@ -1150,21 +1442,32 @@ const qualities = [
 
   {
     icon: 'analysis',
-    title: 'Analyse des problèmes',
+
+    title:
+      'Analyse des problèmes',
+
     description:
       'Capacité à analyser les besoins et rechercher des solutions adaptées.'
   },
 
+
   {
     icon: 'team',
-    title: 'Travail en équipe',
+
+    title:
+      'Travail en équipe',
+
     description:
       'Collaboration efficace dans un environnement de développement.'
   },
 
+
   {
     icon: 'organisation',
-    title: 'Organisation',
+
+    title:
+      'Organisation',
+
     description:
       'Organisation du travail et respect des objectifs et des délais.'
   }
@@ -1180,16 +1483,21 @@ const languages = [
 
   {
     name: 'Arabe',
+
     level: 'Langue maternelle'
   },
 
+
   {
     name: 'Français',
+
     level: 'Courant'
   },
 
+
   {
     name: 'Anglais',
+
     level: 'Intermédiaire'
   }
 
@@ -1204,28 +1512,39 @@ const interests = [
 
   {
     icon: 'search',
+
     title: 'Recherche',
+
     description:
       'Recherche d’informations et découverte de nouvelles technologies.'
   },
 
+
   {
     icon: 'code',
+
     title: 'Programmation',
+
     description:
       'Développement et expérimentation autour de nouvelles idées.'
   },
 
+
   {
     icon: 'idea',
+
     title: 'Création de solutions',
+
     description:
       'Transformation des besoins en solutions digitales concrètes.'
   },
 
+
   {
     icon: 'history',
+
     title: 'Histoire',
+
     description:
       'Intérêt pour l’histoire et la découverte des événements du passé.'
   }
@@ -1233,23 +1552,3 @@ const interests = [
 ]
 
 </script>
-
-
-<style scoped>
-
-/* ================================================= */
-/* DETAILS ANIMATION */
-/* ================================================= */
-
-.details-enter-active,
-.details-leave-active {
-  transition: opacity .25s ease, transform .25s ease;
-}
-
-.details-enter-from,
-.details-leave-to {
-  opacity: 0;
-  transform: translateY(-8px);
-}
-
-</style>

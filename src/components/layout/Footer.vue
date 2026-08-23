@@ -6,7 +6,7 @@
   
   <p class="text-gray-400">
   
-  © 2026 Clara Thella.
+  © 2026 Harbegue Bilel.
   
   Tous droits réservés.
   

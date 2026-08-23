@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+/* منع السكرول الأفقي في جميع الصفحات */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  
+  /* تطبيق على جميع العناصر */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* منع السكرول الأفقي على مستوى التطبيق */
+  #app {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  /* تصحيح أي عنصر قد يسبب السكرول */
+  img, video, canvas, iframe {
+    max-width: 100%;
+    height: auto;
+  }

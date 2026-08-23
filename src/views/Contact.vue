@@ -1,135 +1,99 @@
+
 <template>
-  <main class="min-h-screen bg-[#050816] text-white pt-20">
+  <main class="min-h-screen bg-[#050816] pt-20 text-white">
 
-    <!-- ================================================= -->
     <!-- HERO -->
-    <!-- ================================================= -->
-
-    <section class="relative py-20 overflow-hidden">
+    <section class="relative overflow-hidden py-20">
 
       <!-- Glow -->
-
       <div
-        class="absolute -top-20 -left-20
-               w-80 h-80
-               bg-cyan-500/10
-               rounded-full
-               blur-[120px]"
+        class="absolute -top-20 -left-20 h-80 w-80 rounded-full bg-cyan-500/10 blur-[120px]"
       ></div>
 
       <div
-        class="absolute bottom-0 -right-20
-               w-80 h-80
-               bg-violet-600/10
-               rounded-full
-               blur-[120px]"
+        class="absolute right-[-80px] bottom-0 h-80 w-80 rounded-full bg-violet-600/10 blur-[120px]"
       ></div>
 
+      <div class="relative z-10 mx-auto max-w-7xl px-6">
 
-      <div class="relative z-10 max-w-7xl mx-auto px-6">
-
-        <!-- Title -->
-
+        <!-- TITLE -->
         <div class="text-center">
 
-          <p class="text-cyan-400 font-medium mb-3">
+          <p class="mb-3 font-medium text-cyan-400">
             Parlons de votre projet
           </p>
 
-          <h1
-            class="text-5xl md:text-6xl
-                   font-extrabold"
-          >
+          <h1 class="text-5xl font-extrabold md:text-6xl">
             Me
             <span
-              class="text-transparent
-                     bg-clip-text
-                     bg-gradient-to-r
-                     from-cyan-400
-                     to-violet-500"
+              class="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent"
             >
               contacter
             </span>
           </h1>
 
           <p
-            class="max-w-2xl
-                   mx-auto
-                   mt-6
-                   text-gray-400
-                   text-lg
-                   leading-relaxed"
+            class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-400"
           >
             Vous avez une idée, un projet web ou besoin
             d'une solution digitale ? Décrivez-moi votre
             projet et choisissez votre moyen de contact.
           </p>
 
-          <div class="section-line"></div>
+          <!-- Section line -->
+          <div
+            class="mx-auto mt-5 h-[3px] w-[70px] rounded-full bg-gradient-to-r from-cyan-400 to-violet-500"
+          ></div>
 
         </div>
 
 
-        <!-- ================================================= -->
         <!-- CONTACT AREA -->
-        <!-- ================================================= -->
-
         <div
-          class="grid lg:grid-cols-[.75fr_1.25fr]
-                 gap-8
-                 mt-16
-                 items-start"
+          class="mt-16 grid items-start gap-8 lg:grid-cols-[.75fr_1.25fr]"
         >
 
-
-          <!-- ================================================= -->
           <!-- CONTACT INFO -->
-          <!-- ================================================= -->
-
           <div class="space-y-5">
 
             <!-- WhatsApp -->
+            <div
+              class="flex items-center gap-4 rounded-[20px] border border-cyan-400/10 bg-[rgba(8,16,31,.72)] p-5 backdrop-blur-xl transition duration-300 hover:translate-x-1 hover:border-cyan-400/35 hover:shadow-[0_0_30px_rgba(34,211,238,.05)]"
+            >
 
-            <div class="contact-card">
-
-              <div class="contact-icon">
-
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] border border-cyan-400/15 bg-cyan-400/8 text-cyan-400"
+              >
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.7"
-                  class="w-6 h-6"
+                  class="h-6 w-6"
                 >
                   <path
                     d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"
                   />
-
                   <path
                     d="M8.5 8.5c.3-.5.7-.5 1-.1l.9 1c.2.3.2.6 0 .9.3 1.3 1.7 2.2 3 3l.5-.4c.3-.2.6-.2.9 0l1 .9c.4.3.4.7-.1 1-.5.4-1.2.5-1.8.3-2.2-.7-4.7-3.2-5.4-5.4-.2-.6-.1-1.3.4-1.7Z"
                   />
                 </svg>
-
               </div>
 
-
-              <div class="flex-1">
-
-                <p class="contact-label">
+              <div class="min-w-0 flex-1">
+                <p class="text-xs text-gray-400">
                   WhatsApp
                 </p>
 
-                <p class="contact-value">
+                <p class="mt-1 text-sm text-gray-200">
                   Disponible pour discuter
                 </p>
-
               </div>
-
 
               <button
                 type="button"
                 @click="openWhatsApp"
-                class="contact-action"
+                class="rounded-full border border-cyan-400/15 bg-cyan-400/6 px-3.5 py-2 text-xs font-semibold text-cyan-300 transition duration-300 hover:border-cyan-400/40 hover:bg-cyan-400/12"
               >
                 Écrire
               </button>
@@ -137,18 +101,20 @@
             </div>
 
 
-            <!-- Email -->
+            <!-- EMAIL -->
+            <div
+              class="flex items-center gap-4 rounded-[20px] border border-cyan-400/10 bg-[rgba(8,16,31,.72)] p-5 backdrop-blur-xl transition duration-300 hover:translate-x-1 hover:border-cyan-400/35 hover:shadow-[0_0_30px_rgba(34,211,238,.05)]"
+            >
 
-            <div class="contact-card">
-
-              <div class="contact-icon">
-
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] border border-cyan-400/15 bg-cyan-400/8 text-cyan-400"
+              >
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.7"
-                  class="w-6 h-6"
+                  class="h-6 w-6"
                 >
                   <rect
                     x="3"
@@ -157,31 +123,24 @@
                     height="14"
                     rx="2"
                   />
-
                   <path d="m3 7 9 6 9-6" />
-
                 </svg>
-
               </div>
 
-
-              <div class="flex-1 min-w-0">
-
-                <p class="contact-label">
+              <div class="min-w-0 flex-1">
+                <p class="text-xs text-gray-400">
                   Email
                 </p>
 
-                <p class="contact-value truncate">
+                <p class="mt-1 truncate text-sm text-gray-200">
                   {{ emailAddress }}
                 </p>
-
               </div>
-
 
               <button
                 type="button"
                 @click="openGmail"
-                class="contact-action"
+                class="rounded-full border border-cyan-400/15 bg-cyan-400/6 px-3.5 py-2 text-xs font-semibold text-cyan-300 transition duration-300 hover:border-cyan-400/40 hover:bg-cyan-400/12"
               >
                 Gmail
               </button>
@@ -189,67 +148,62 @@
             </div>
 
 
-            <!-- Location -->
+            <!-- LOCATION -->
+            <div
+              class="flex items-center gap-4 rounded-[20px] border border-cyan-400/10 bg-[rgba(8,16,31,.72)] p-5 backdrop-blur-xl transition duration-300 hover:translate-x-1 hover:border-cyan-400/35 hover:shadow-[0_0_30px_rgba(34,211,238,.05)]"
+            >
 
-            <div class="contact-card">
-
-              <div class="contact-icon">
-
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] border border-cyan-400/15 bg-cyan-400/8 text-cyan-400"
+              >
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.7"
-                  class="w-6 h-6"
+                  class="h-6 w-6"
                 >
                   <path
                     d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"
                   />
-
                   <circle
                     cx="12"
                     cy="10"
                     r="2.5"
                   />
-
                 </svg>
-
               </div>
 
-
               <div>
-
-                <p class="contact-label">
+                <p class="text-xs text-gray-400">
                   Localisation
                 </p>
 
-                <p class="contact-value">
+                <p class="mt-1 text-sm text-gray-200">
                   Tunisie
                 </p>
-
               </div>
 
             </div>
 
 
-            <!-- Availability -->
-
+            <!-- AVAILABILITY -->
             <div
-              class="availability-card"
+              class="flex items-center gap-3 rounded-[20px] border border-cyan-400/12 bg-gradient-to-br from-cyan-400/6 to-violet-500/5 p-5"
             >
 
-              <span class="status-dot"></span>
+              <span
+                class="h-2.5 w-2.5 shrink-0 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,.9)]"
+              ></span>
 
               <div>
-
                 <p class="font-semibold">
                   Disponible pour de nouveaux projets
                 </p>
 
-                <p class="text-gray-500 text-sm mt-1">
+                <p class="mt-1 text-sm text-gray-500">
                   N'hésitez pas à me contacter.
                 </p>
-
               </div>
 
             </div>
@@ -257,27 +211,23 @@
           </div>
 
 
-          <!-- ================================================= -->
           <!-- CONTACT FORM -->
-          <!-- ================================================= -->
-
           <div
-            class="form-card"
+            class="rounded-[28px] border border-cyan-400/14 bg-[rgba(8,16,31,.78)] p-[22px] shadow-[0_0_50px_rgba(34,211,238,.04)] backdrop-blur-2xl md:p-8"
           >
 
-            <!-- Form Header -->
-
+            <!-- FORM HEADER -->
             <div class="mb-8">
 
-              <p class="text-cyan-400 text-sm font-medium">
+              <p class="text-sm font-medium text-cyan-400">
                 Envoyez-moi un message
               </p>
 
-              <h2 class="text-2xl md:text-3xl font-bold mt-2">
+              <h2 class="mt-2 text-2xl font-bold md:text-3xl">
                 Parlons de votre idée
               </h2>
 
-              <p class="text-gray-500 text-sm mt-3">
+              <p class="mt-3 text-sm text-gray-500">
                 Remplissez le formulaire puis choisissez
                 WhatsApp ou Gmail pour envoyer votre message.
               </p>
@@ -285,13 +235,13 @@
             </div>
 
 
-            <!-- Name + Email -->
-
-            <div class="grid md:grid-cols-2 gap-5">
+            <!-- NAME + EMAIL -->
+            <div class="grid gap-5 md:grid-cols-2">
 
               <div>
-
-                <label>
+                <label
+                  class="mb-2 block text-[13px] font-medium text-gray-300"
+                >
                   Nom
                 </label>
 
@@ -299,15 +249,15 @@
                   v-model="form.name"
                   type="text"
                   placeholder="Votre nom"
-                  class="input"
+                  class="w-full rounded-xl border border-white/8 bg-white/[.025] px-[15px] py-[13px] text-white outline-none transition duration-300 placeholder:text-gray-600 focus:border-cyan-400/50 focus:bg-cyan-400/[.025] focus:shadow-[0_0_20px_rgba(34,211,238,.05)]"
                 />
-
               </div>
 
 
               <div>
-
-                <label>
+                <label
+                  class="mb-2 block text-[13px] font-medium text-gray-300"
+                >
                   Email
                 </label>
 
@@ -315,19 +265,19 @@
                   v-model="form.email"
                   type="email"
                   placeholder="votre@email.com"
-                  class="input"
+                  class="w-full rounded-xl border border-white/8 bg-white/[.025] px-[15px] py-[13px] text-white outline-none transition duration-300 placeholder:text-gray-600 focus:border-cyan-400/50 focus:bg-cyan-400/[.025] focus:shadow-[0_0_20px_rgba(34,211,238,.05)]"
                 />
-
               </div>
 
             </div>
 
 
-            <!-- Subject -->
-
+            <!-- SUBJECT -->
             <div class="mt-5">
 
-              <label>
+              <label
+                class="mb-2 block text-[13px] font-medium text-gray-300"
+              >
                 Sujet
               </label>
 
@@ -335,17 +285,18 @@
                 v-model="form.subject"
                 type="text"
                 placeholder="Ex : Création d'un site web"
-                class="input"
+                class="w-full rounded-xl border border-white/8 bg-white/[.025] px-[15px] py-[13px] text-white outline-none transition duration-300 placeholder:text-gray-600 focus:border-cyan-400/50 focus:bg-cyan-400/[.025] focus:shadow-[0_0_20px_rgba(34,211,238,.05)]"
               />
 
             </div>
 
 
-            <!-- Message -->
-
+            <!-- MESSAGE -->
             <div class="mt-5">
 
-              <label>
+              <label
+                class="mb-2 block text-[13px] font-medium text-gray-300"
+              >
                 Message
               </label>
 
@@ -353,14 +304,13 @@
                 v-model="form.message"
                 rows="6"
                 placeholder="Décrivez votre projet..."
-                class="input resize-none"
+                class="w-full resize-none rounded-xl border border-white/8 bg-white/[.025] px-[15px] py-[13px] text-white outline-none transition duration-300 placeholder:text-gray-600 focus:border-cyan-400/50 focus:bg-cyan-400/[.025] focus:shadow-[0_0_20px_rgba(34,211,238,.05)]"
               ></textarea>
 
             </div>
 
 
-            <!-- Error -->
-
+            <!-- ERROR -->
             <p
               v-if="error"
               class="mt-4 text-sm text-red-400"
@@ -369,11 +319,10 @@
             </p>
 
 
-            <!-- Success -->
-
+            <!-- SUCCESS -->
             <div
               v-if="success"
-              class="success-message"
+              class="mt-4 flex items-center gap-2 rounded-xl border border-cyan-400/15 bg-cyan-400/6 px-[15px] py-3 text-[13px] text-cyan-300"
             >
 
               <svg
@@ -381,7 +330,7 @@
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
-                class="w-5 h-5"
+                class="h-5 w-5"
               >
                 <path d="m5 12 4 4L19 6" />
               </svg>
@@ -391,20 +340,14 @@
             </div>
 
 
-            <!-- Buttons -->
+            <!-- BUTTONS -->
+            <div class="mt-7 grid gap-4 sm:grid-cols-2">
 
-            <div
-              class="grid sm:grid-cols-2
-                     gap-4
-                     mt-7"
-            >
-
-              <!-- WhatsApp -->
-
+              <!-- WHATSAPP -->
               <button
                 type="button"
                 @click="sendWhatsApp"
-                class="send-button whatsapp"
+                class="flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-gradient-to-br from-cyan-400 to-violet-500 px-[18px] py-3.5 font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(34,211,238,.25)]"
               >
 
                 <svg
@@ -412,16 +355,14 @@
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.8"
-                  class="w-5 h-5"
+                  class="h-5 w-5"
                 >
                   <path
                     d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"
                   />
-
                   <path
                     d="M8.5 8.5c.3-.5.7-.5 1-.1l.9 1c.2.3.2.6 0 .9.3 1.3 1.7 2.2 3 3l.5-.4c.3-.2.6-.2.9 0l1 .9c.4.3.4.7-.1 1-.5.4-1.2.5-1.8.3-2.2-.7-4.7-3.2-5.4-5.4-.2-.6-.1-1.3.4-1.7Z"
                   />
-
                 </svg>
 
                 Envoyer via WhatsApp
@@ -429,12 +370,11 @@
               </button>
 
 
-              <!-- Gmail -->
-
+              <!-- GMAIL -->
               <button
                 type="button"
                 @click="sendGmail"
-                class="send-button gmail"
+                class="flex min-h-[52px] items-center justify-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-400/5 px-[18px] py-3.5 font-semibold text-cyan-300 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-400/45 hover:bg-cyan-400/10"
               >
 
                 <svg
@@ -442,7 +382,7 @@
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.8"
-                  class="w-5 h-5"
+                  class="h-5 w-5"
                 >
                   <rect
                     x="3"
@@ -451,9 +391,7 @@
                     height="14"
                     rx="2"
                   />
-
                   <path d="m3 7 9 6 9-6" />
-
                 </svg>
 
                 Envoyer via Gmail
@@ -464,10 +402,7 @@
 
 
             <p
-              class="text-center
-                     text-gray-600
-                     text-xs
-                     mt-5"
+              class="mt-5 text-center text-xs text-gray-600"
             >
               Aucun backend nécessaire.
               Votre message est envoyé via votre application
@@ -483,62 +418,41 @@
     </section>
 
 
-    <!-- ================================================= -->
     <!-- CTA -->
-    <!-- ================================================= -->
-
     <section class="relative py-20">
 
       <div
-        class="absolute inset-0
-               bg-cyan-500/[.02]
-               pointer-events-none"
+        class="pointer-events-none absolute inset-0 bg-cyan-500/[.02]"
       ></div>
 
-      <div class="max-w-4xl mx-auto px-6">
+      <div class="mx-auto max-w-4xl px-6">
 
-        <div class="cta">
+        <div
+          class="relative overflow-hidden rounded-[28px] border border-cyan-400/18 bg-gradient-to-br from-[rgba(8,16,31,.9)] to-[rgba(10,15,35,.75)] px-[30px] py-[55px] text-center shadow-[0_0_50px_rgba(34,211,238,.05)] backdrop-blur-2xl"
+        >
 
+          <!-- Glow -->
           <div
-            class="absolute
-                   -top-24
-                   left-1/2
-                   -translate-x-1/2
-                   w-80 h-40
-                   bg-cyan-400/10
-                   rounded-full
-                   blur-[90px]"
+            class="absolute -top-24 left-1/2 h-40 w-80 -translate-x-1/2 rounded-full bg-cyan-400/10 blur-[90px]"
           ></div>
-
 
           <div class="relative z-10">
 
-            <p class="text-cyan-400 font-medium mb-3">
+            <p class="mb-3 font-medium text-cyan-400">
               Merci pour votre visite
             </p>
 
-            <h2
-              class="text-3xl md:text-4xl
-                     font-bold"
-            >
+            <h2 class="text-3xl font-bold md:text-4xl">
               Construisons quelque chose
               <span
-                class="text-transparent
-                       bg-clip-text
-                       bg-gradient-to-r
-                       from-cyan-400
-                       to-violet-500"
+                class="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent"
               >
                 d'exception.
               </span>
             </h2>
 
             <p
-              class="text-gray-400
-                     max-w-xl
-                     mx-auto
-                     mt-5
-                     leading-relaxed"
+              class="mx-auto mt-5 max-w-xl leading-relaxed text-gray-400"
             >
               Une idée, un projet ou simplement
               une question ? Je serais ravi d'échanger
@@ -549,19 +463,7 @@
             <button
               type="button"
               @click="openWhatsApp"
-              class="inline-flex
-                     items-center
-                     gap-2
-                     mt-8
-                     px-7 py-3
-                     rounded-full
-                     bg-gradient-to-r
-                     from-cyan-400
-                     to-violet-500
-                     font-semibold
-                     transition
-                     hover:scale-105
-                     hover:shadow-[0_0_30px_#22d3ee]"
+              class="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500 px-7 py-3 font-semibold transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#22d3ee]"
             >
 
               <svg
@@ -569,16 +471,14 @@
                 fill="none"
                 stroke="currentColor"
                 stroke-width="1.8"
-                class="w-5 h-5"
+                class="h-5 w-5"
               >
                 <path
                   d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"
                 />
-
                 <path
                   d="M8.5 8.5c.3-.5.7-.5 1-.1l.9 1c.2.3.2.6 0 .9.3 1.3 1.7 2.2 3 3l.5-.4c.3-.2.6-.2.9 0l1 .9c.4.3.4.7-.1 1-.5.4-1.2.5-1.8.3-2.2-.7-4.7-3.2-5.4-5.4-.2-.6-.1-1.3.4-1.7Z"
                 />
-
               </svg>
 
               Discuter sur WhatsApp
@@ -602,42 +502,24 @@
 import { reactive, ref } from 'vue'
 
 
-/* ================================================= */
-/* CONTACT INFORMATION */
-/* ================================================= */
+// ================================================
+// CONTACT INFORMATION
+// ================================================
 
-/*
-  ضع رقم WhatsApp الخاص بك هنا
-  بدون + وبدون مسافات
+const whatsappNumber = '21625270149'
 
-  مثال تونس:
-  216XXXXXXXX
-*/
-
-const whatsappNumber = '216XXXXXXXX'
+const emailAddress = 'bilel.harbegue2003@gmail.com'
 
 
-/*
-  ضع Gmail الخاص بك هنا
-*/
-
-const emailAddress = 'your@email.com'
-
-
-/* ================================================= */
-/* FORM */
-/* ================================================= */
+// ================================================
+// FORM
+// ================================================
 
 const form = reactive({
-
   name: '',
-
   email: '',
-
   subject: '',
-
   message: ''
-
 })
 
 
@@ -646,52 +528,37 @@ const error = ref('')
 const success = ref(false)
 
 
-/* ================================================= */
-/* VALIDATION */
-/* ================================================= */
+// ================================================
+// VALIDATION
+// ================================================
 
 const validateForm = () => {
 
   error.value = ''
-
   success.value = false
 
-
   if (!form.name.trim()) {
-
     error.value = 'Veuillez saisir votre nom.'
-
     return false
-
   }
-
 
   if (!form.email.trim()) {
-
     error.value = 'Veuillez saisir votre adresse email.'
-
     return false
-
   }
-
 
   if (!form.message.trim()) {
-
     error.value = 'Veuillez saisir votre message.'
-
     return false
-
   }
 
-
   return true
-
 }
 
 
-/* ================================================= */
-/* WHATSAPP */
-/* ================================================= */
+// ================================================
+// WHATSAPP
+// ================================================
 
 const createMessage = () => {
 
@@ -724,10 +591,8 @@ Je souhaite vous contacter concernant un projet web.
 Merci.
   `.trim()
 
-
   const url =
     `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
-
 
   window.open(url, '_blank')
 
@@ -738,25 +603,21 @@ const sendWhatsApp = () => {
 
   if (!validateForm()) return
 
-
   const message = createMessage()
-
 
   const url =
     `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
 
-
   success.value = true
-
 
   window.open(url, '_blank')
 
 }
 
 
-/* ================================================= */
-/* GMAIL */
-/* ================================================= */
+// ================================================
+// GMAIL
+// ================================================
 
 const createEmailBody = () => {
 
@@ -782,17 +643,13 @@ ${form.name}
 
 const openGmail = () => {
 
-  const subject =
-    'Contact depuis mon portfolio'
-
+  const subject = 'Contact depuis mon portfolio'
 
   const body =
     'Bonjour, je souhaite vous contacter concernant un projet web.'
 
-
   const url =
     `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(emailAddress)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-
 
   window.open(url, '_blank')
 
@@ -803,520 +660,20 @@ const sendGmail = () => {
 
   if (!validateForm()) return
 
-
   const subject =
     form.subject || 'Contact depuis mon portfolio'
-
 
   const body =
     createEmailBody()
 
-
   const url =
     `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(emailAddress)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
-
   success.value = true
-
 
   window.open(url, '_blank')
 
 }
 
 </script>
-
-
-<style scoped>
-
-/* ================================================= */
-/* SECTION TITLE */
-/* ================================================= */
-
-.section-line {
-
-  width: 70px;
-
-  height: 3px;
-
-  margin: 20px auto 0;
-
-  border-radius: 999px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #22d3ee,
-      #8b5cf6
-    );
-
-}
-
-
-/* ================================================= */
-/* CONTACT CARD */
-/* ================================================= */
-
-.contact-card {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 16px;
-
-  padding: 20px;
-
-  border-radius: 20px;
-
-  background:
-    rgba(8,16,31,.72);
-
-  border:
-    1px solid
-    rgba(34,211,238,.10);
-
-  backdrop-filter:
-    blur(12px);
-
-  transition:
-    .3s;
-
-}
-
-
-.contact-card:hover {
-
-  transform:
-    translateX(5px);
-
-  border-color:
-    rgba(34,211,238,.35);
-
-  box-shadow:
-    0 0 30px
-    rgba(34,211,238,.05);
-
-}
-
-
-/* ================================================= */
-/* CONTACT ICON */
-/* ================================================= */
-
-.contact-icon {
-
-  width: 48px;
-
-  height: 48px;
-
-  flex-shrink: 0;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border-radius: 14px;
-
-  color: #22d3ee;
-
-  background:
-    rgba(34,211,238,.08);
-
-  border:
-    1px solid
-    rgba(34,211,238,.15);
-
-}
-
-
-.contact-label {
-
-  color: #9ca3af;
-
-  font-size: 12px;
-
-}
-
-
-.contact-value {
-
-  margin-top: 4px;
-
-  color: #e5e7eb;
-
-  font-size: 14px;
-
-}
-
-
-/* ================================================= */
-/* CONTACT ACTION */
-/* ================================================= */
-
-.contact-action {
-
-  padding: 8px 14px;
-
-  border-radius: 999px;
-
-  color: #67e8f9;
-
-  background:
-    rgba(34,211,238,.06);
-
-  border:
-    1px solid
-    rgba(34,211,238,.15);
-
-  font-size: 12px;
-
-  font-weight: 600;
-
-  transition: .3s;
-
-}
-
-
-.contact-action:hover {
-
-  background:
-    rgba(34,211,238,.12);
-
-  border-color:
-    rgba(34,211,238,.4);
-
-}
-
-
-/* ================================================= */
-/* AVAILABILITY */
-/* ================================================= */
-
-.availability-card {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 12px;
-
-  padding: 20px;
-
-  border-radius: 20px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(34,211,238,.06),
-      rgba(139,92,246,.05)
-    );
-
-  border:
-    1px solid
-    rgba(34,211,238,.12);
-
-}
-
-
-.status-dot {
-
-  width: 10px;
-
-  height: 10px;
-
-  flex-shrink: 0;
-
-  border-radius: 50%;
-
-  background: #22d3ee;
-
-  box-shadow:
-    0 0 10px
-    rgba(34,211,238,.9);
-
-}
-
-
-/* ================================================= */
-/* FORM CARD */
-/* ================================================= */
-
-.form-card {
-
-  padding: 32px;
-
-  border-radius: 28px;
-
-  background:
-    rgba(8,16,31,.78);
-
-  border:
-    1px solid
-    rgba(34,211,238,.14);
-
-  backdrop-filter:
-    blur(16px);
-
-  box-shadow:
-    0 0 50px
-    rgba(34,211,238,.04);
-
-}
-
-
-.form-card label {
-
-  display: block;
-
-  margin-bottom: 8px;
-
-  color: #d1d5db;
-
-  font-size: 13px;
-
-  font-weight: 500;
-
-}
-
-
-/* ================================================= */
-/* INPUT */
-/* ================================================= */
-
-.input {
-
-  width: 100%;
-
-  padding: 13px 15px;
-
-  border-radius: 12px;
-
-  outline: none;
-
-  color: white;
-
-  background:
-    rgba(255,255,255,.025);
-
-  border:
-    1px solid
-    rgba(255,255,255,.08);
-
-  transition:
-    .3s;
-
-}
-
-
-.input::placeholder {
-
-  color:
-    #4b5563;
-
-}
-
-
-.input:focus {
-
-  border-color:
-    rgba(34,211,238,.5);
-
-  background:
-    rgba(34,211,238,.025);
-
-  box-shadow:
-    0 0 20px
-    rgba(34,211,238,.05);
-
-}
-
-
-/* ================================================= */
-/* SEND BUTTON */
-/* ================================================= */
-
-.send-button {
-
-  min-height: 52px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 10px;
-
-  padding: 14px 18px;
-
-  border-radius: 999px;
-
-  font-weight: 600;
-
-  transition:
-    .3s;
-
-}
-
-
-.send-button:hover {
-
-  transform:
-    translateY(-2px);
-
-}
-
-
-/* WhatsApp */
-
-.send-button.whatsapp {
-
-  color: white;
-
-  background:
-    linear-gradient(
-      135deg,
-      #22d3ee,
-      #8b5cf6
-    );
-
-  box-shadow:
-    0 0 25px
-    rgba(34,211,238,.08);
-
-}
-
-
-.send-button.whatsapp:hover {
-
-  box-shadow:
-    0 0 30px
-    rgba(34,211,238,.25);
-
-}
-
-
-/* Gmail */
-
-.send-button.gmail {
-
-  color: #67e8f9;
-
-  background:
-    rgba(34,211,238,.05);
-
-  border:
-    1px solid
-    rgba(34,211,238,.25);
-
-}
-
-
-.send-button.gmail:hover {
-
-  background:
-    rgba(34,211,238,.10);
-
-  border-color:
-    rgba(34,211,238,.45);
-
-}
-
-
-/* ================================================= */
-/* SUCCESS */
-/* ================================================= */
-
-.success-message {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  padding: 12px 15px;
-
-  border-radius: 12px;
-
-  color: #67e8f9;
-
-  background:
-    rgba(34,211,238,.06);
-
-  border:
-    1px solid
-    rgba(34,211,238,.15);
-
-  font-size: 13px;
-
-}
-
-
-/* ================================================= */
-/* CTA */
-/* ================================================= */
-
-.cta {
-
-  position: relative;
-
-  padding:
-    55px 30px;
-
-  text-align: center;
-
-  border-radius: 28px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(8,16,31,.9),
-      rgba(10,15,35,.75)
-    );
-
-  border:
-    1px solid
-    rgba(34,211,238,.18);
-
-  backdrop-filter:
-    blur(16px);
-
-  overflow: hidden;
-
-  box-shadow:
-    0 0 50px
-    rgba(34,211,238,.05);
-
-}
-
-
-/* ================================================= */
-/* RESPONSIVE */
-/* ================================================= */
-
-@media (max-width: 640px) {
-
-  .form-card {
-
-    padding: 22px;
-
-  }
-
-  .contact-card {
-
-    padding: 16px;
-
-  }
-
-  .contact-action {
-
-    display: none;
-
-  }
-
-}
-
-</style>
+```
