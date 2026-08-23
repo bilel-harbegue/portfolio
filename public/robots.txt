@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bilel-harbegue.vercel.app/sitemap.xml
