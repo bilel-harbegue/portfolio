@@ -37,3 +37,14 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
