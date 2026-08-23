@@ -1491,7 +1491,7 @@ const languages = [
   {
     name: 'Français',
 
-    level: 'Courant'
+    level: 'Intermédiaire'
   },
 
 
