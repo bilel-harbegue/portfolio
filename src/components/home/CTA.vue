@@ -19,7 +19,7 @@
       <div
         class="absolute top-10 left-10
                w-40 h-40
-               bg-violet-600/10
+               bg-blue-600/10
                rounded-full blur-[100px]"
       ></div>
 
@@ -91,8 +91,8 @@
           class="absolute top-[20%] right-[12%]
                  w-[5px] h-[5px]
                  rounded-full
-                 bg-violet-500
-                 shadow-[0_0_8px_#8b5cf6]
+                 bg-blue-500
+                 shadow-[0_0_8px_#3b82f6]
                  animate-pulse"
         ></span>
 
@@ -116,7 +116,7 @@
                  text-cyan-400
                  bg-gradient-to-br
                  from-cyan-400/12
-                 to-violet-500/12
+                 to-blue-500/12
                  border border-cyan-400/20
                  shadow-[0_0_25px_rgba(34,211,238,.08)]
                  animate-pulse"
@@ -152,7 +152,7 @@
         <!-- ================= Text ================= -->
 
         <p class="text-cyan-400 font-medium mb-4">
-          Un projet en tête ?
+          Une idée ou une opportunité ?
         </p>
 
 
@@ -161,16 +161,16 @@
                  font-bold leading-tight"
         >
 
-          Créons quelque chose
+          Échangeons autour
 
           <span
             class="text-transparent
                    bg-clip-text
                    bg-gradient-to-r
                    from-cyan-400
-                   to-violet-500"
+                   to-blue-500"
           >
-            d'exception.
+            de votre projet.
           </span>
 
         </h2>
@@ -181,9 +181,9 @@
                  text-gray-400 leading-relaxed"
         >
 
-          Vous avez une idée, un projet web ou besoin
-          d'une solution digitale ? Je serais ravi
-          d'en discuter avec vous.
+          Je suis toujours intéressé par les projets web,
+          les collaborations et les nouvelles opportunités.
+          N'hésitez pas à me contacter pour en discuter.
 
         </p>
 
@@ -205,7 +205,7 @@
                    rounded-full
                    bg-gradient-to-r
                    from-cyan-400
-                   to-violet-500
+                   to-blue-600
                    text-white
                    font-semibold
                    transition-all duration-300
@@ -265,7 +265,7 @@
           ></span>
 
           <span class="text-xs text-gray-500">
-            Disponible pour de nouveaux projets
+            Ouvert aux collaborations et opportunités
           </span>
 
         </div>

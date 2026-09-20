@@ -14,7 +14,7 @@
 
       <div
         class="absolute bottom-0 -right-20 w-80 h-80
-               bg-violet-600/10 rounded-full blur-[120px]"
+               bg-blue-600/10 rounded-full blur-[120px]"
       ></div>
 
       <div class="relative z-10 max-w-7xl mx-auto px-6">
@@ -34,7 +34,7 @@
 
               <span
                 class="block text-transparent bg-clip-text
-                       bg-gradient-to-r from-cyan-400 to-violet-500"
+                       bg-gradient-to-r from-cyan-400 to-blue-500"
               >
                 Vitae
               </span>
@@ -44,11 +44,13 @@
               class="mt-6 max-w-2xl text-gray-400
                      text-lg leading-relaxed"
             >
-              Diplômé en Licence Appliquée en Technologies de l’Information,
-              actuellement en Cycle d’Ingénieur en Informatique.
-              Passionné par le développement web et les technologies numériques,
-              avec une expérience acquise à travers des stages, des projets
-              académiques et une formation Full Stack.
+              Diplômé en Licence Appliquée en Technologies de l’Information
+              et actuellement en Cycle d’Ingénieur en Informatique à
+              l’Université SESAME. Spécialisé dans le développement web et
+              particulièrement intéressé par la conception d’interfaces
+              modernes et responsives. Mon parcours comprend des stages,
+              des projets académiques et une formation pratique en
+              développement Full Stack.
             </p>
 
             <div class="flex flex-wrap gap-4 mt-8">
@@ -59,7 +61,7 @@
                 :href="cvPDF"
                 download="Bilel_Harbegue_CV.pdf"
                 class="px-7 py-3 rounded-full
-                       bg-gradient-to-r from-cyan-400 to-violet-500
+                       bg-gradient-to-r from-cyan-400 to-blue-600
                        font-semibold transition
                        hover:scale-105
                        hover:shadow-[0_0_30px_#22d3ee]"
@@ -120,11 +122,11 @@
             </div>
 
             <h2 class="text-2xl font-bold">
-              Harbegue Bilel
+              Bilel Harbegue
             </h2>
 
             <p class="text-cyan-400 mt-2">
-              Full-Stack Developer
+              Frontend Web Developer
             </p>
 
             <div
@@ -142,8 +144,8 @@
                   Formation
                 </span>
 
-                <span>
-                  Cycle d’Ingénieur
+                <span class="text-right">
+                  Cycle d’Ingénieur en Informatique
                 </span>
               </div>
 
@@ -210,7 +212,7 @@
 
           <div
             class="w-20 h-1 mx-auto mt-5 rounded-full
-                   bg-gradient-to-r from-cyan-400 to-violet-500"
+                   bg-gradient-to-r from-cyan-400 to-blue-500"
           ></div>
 
         </div>
@@ -404,7 +406,7 @@
 
           <div
             class="w-20 h-1 mx-auto mt-5 rounded-full
-                   bg-gradient-to-r from-cyan-400 to-violet-500"
+                   bg-gradient-to-r from-cyan-400 to-blue-500"
           ></div>
 
         </div>
@@ -493,7 +495,7 @@
                          rounded-full
                          bg-gradient-to-r
                          from-cyan-400
-                         to-violet-500
+                         to-blue-600
                          text-[#050816]
                          font-semibold
                          text-sm
@@ -528,7 +530,8 @@
                 class="w-4 h-4 transition-transform duration-300"
                 :class="experience.open ? 'rotate-180' : ''"
               >
-                <path d="m6 9 6 6-6"/>
+                <!-- CORRIGÉ -->
+                <path d="m6 9 6 6 6-6"/>
               </svg>
 
             </button>
@@ -562,7 +565,7 @@
 
           <div
             class="w-20 h-1 mx-auto mt-5 rounded-full
-                   bg-gradient-to-r from-cyan-400 to-violet-500"
+                   bg-gradient-to-r from-cyan-400 to-blue-500"
           ></div>
 
         </div>
@@ -747,7 +750,7 @@
 
           <div
             class="w-20 h-1 mx-auto mt-5 rounded-full
-                   bg-gradient-to-r from-cyan-400 to-violet-500"
+                   bg-gradient-to-r from-cyan-400 to-blue-500"
           ></div>
 
         </div>
@@ -858,7 +861,7 @@
 
           <div
             class="w-20 h-1 mx-auto mt-5 rounded-full
-                   bg-gradient-to-r from-cyan-400 to-violet-500"
+                   bg-gradient-to-r from-cyan-400 to-blue-500"
           ></div>
 
         </div>
@@ -942,7 +945,7 @@
 
           <div
             class="w-20 h-1 mx-auto mt-5 rounded-full
-                   bg-gradient-to-r from-cyan-400 to-violet-500"
+                   bg-gradient-to-r from-cyan-400 to-blue-500"
           ></div>
 
         </div>
@@ -1094,7 +1097,7 @@
               <span
                 class="text-transparent bg-clip-text
                        bg-gradient-to-r
-                       from-cyan-400 to-violet-500"
+                       from-cyan-400 to-blue-500"
               >
                 ensemble.
               </span>
@@ -1111,7 +1114,7 @@
               class="inline-flex mt-8 px-7 py-3
                      rounded-full
                      bg-gradient-to-r
-                     from-cyan-400 to-violet-500
+                     from-cyan-400 to-blue-600
                      font-semibold transition
                      hover:scale-105
                      hover:shadow-[0_0_30px_#22d3ee]"
@@ -1141,25 +1144,8 @@ import { RouterLink } from 'vue-router'
 /* PDF FILES */
 /* ================================================= */
 
-/*
-  Les fichiers sont dans :
-
-  src/assets/certificates/
-
-  On les importe ici pour que Vite
-  gère correctement les chemins.
-*/
-
 import cvPDF from '../assets/certificates/bilel_harbegue.pdf'
 import fullStackPDF from '../assets/certificates/full-stack.pdf'
-
-// Si tu as ces fichiers, tu peux aussi les importer.
-// Pour l'instant ils restent commentés.
-
-/*
-import licencePDF from '../assets/certificates/licence.pdf'
-import bacPDF from '../assets/certificates/bac.pdf'
-*/
 
 
 /* ================================================= */
@@ -1168,6 +1154,10 @@ import bacPDF from '../assets/certificates/bac.pdf'
 
 const formations = ref([
 
+  /* ================================================= */
+  /* SESAME */
+  /* ================================================= */
+
   {
     id: 1,
 
@@ -1175,12 +1165,14 @@ const formations = ref([
 
     type: 'Cycle d’Ingénieur',
 
-    title: 'Cycle d’Ingénieur en Informatique',
+    title:
+      'Cycle d’Ingénieur en Informatique',
 
-    place: 'Université SESAME — Tunisie',
+    place:
+      'Université SESAME — Tunisie',
 
     description:
-      'Poursuite des études en Cycle d’Ingénieur en Informatique, avec un approfondissement des compétences en développement logiciel et technologies numériques.',
+      'Formation en ingénierie informatique avec un approfondissement des compétences en développement logiciel, technologies web et conception de solutions numériques.',
 
     certificate: null,
 
@@ -1188,10 +1180,14 @@ const formations = ref([
   },
 
 
+  /* ================================================= */
+  /* LICENCE */
+  /* ================================================= */
+
   {
     id: 2,
 
-    date: '2022 — 2025',
+    date: '2022 — 2026',
 
     type: 'Licence',
 
@@ -1204,16 +1200,15 @@ const formations = ref([
     description:
       'Formation orientée vers les technologies de l’information, le développement logiciel, les bases de données et la conception d’applications.',
 
-    /*
-      Pour le moment pas de PDF associé.
-      Si tu as licence.pdf, on pourra l'ajouter.
-    */
-
     certificate: null,
 
     open: false
   },
 
+
+  /* ================================================= */
+  /* FULL STACK */
+  /* ================================================= */
 
   {
     id: 3,
@@ -1237,6 +1232,10 @@ const formations = ref([
   },
 
 
+  /* ================================================= */
+  /* BAC */
+  /* ================================================= */
+
   {
     id: 4,
 
@@ -1252,11 +1251,6 @@ const formations = ref([
 
     description:
       'Formation secondaire spécialisée en informatique et technologies numériques.',
-
-    /*
-      Pour le moment pas de PDF associé.
-      Si tu as bac.pdf, on pourra l'ajouter.
-    */
 
     certificate: null,
 
@@ -1283,6 +1277,10 @@ const toggleFormation = (formation) => {
 
 const experiences = ref([
 
+  /* ================================================= */
+  /* VIKASPACE */
+  /* ================================================= */
+
   {
     id: 1,
 
@@ -1291,7 +1289,7 @@ const experiences = ref([
     date: '2024 · 1 mois',
 
     title:
-      'Stagiaire Développeur Web',
+      'Stage de perfectionnement',
 
     company:
       'Vikaspace',
@@ -1312,6 +1310,10 @@ const experiences = ref([
     open: false
   },
 
+
+  /* ================================================= */
+  /* CNI - PFE */
+  /* ================================================= */
 
   {
     id: 2,
@@ -1491,7 +1493,7 @@ const languages = [
   {
     name: 'Français',
 
-    level: 'Intermédiaire'
+    level: 'Courant'
   },
 
 

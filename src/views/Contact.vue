@@ -1,4 +1,3 @@
-
 <template>
   <main class="min-h-screen bg-[#050816] pt-20 text-white">
 
@@ -11,7 +10,7 @@
       ></div>
 
       <div
-        class="absolute right-[-80px] bottom-0 h-80 w-80 rounded-full bg-violet-600/10 blur-[120px]"
+        class="absolute right-[-80px] bottom-0 h-80 w-80 rounded-full bg-blue-600/10 blur-[120px]"
       ></div>
 
       <div class="relative z-10 mx-auto max-w-7xl px-6">
@@ -20,13 +19,13 @@
         <div class="text-center">
 
           <p class="mb-3 font-medium text-cyan-400">
-            Parlons de votre projet
+            Bilel Harbegue · Frontend Web Developer
           </p>
 
           <h1 class="text-5xl font-extrabold md:text-6xl">
             Me
             <span
-              class="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent"
+              class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
             >
               contacter
             </span>
@@ -35,14 +34,14 @@
           <p
             class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-400"
           >
-            Vous avez une idée, un projet web ou besoin
-            d'une solution digitale ? Décrivez-moi votre
-            projet et choisissez votre moyen de contact.
+            Vous avez un projet web, une idée d’application ou besoin
+            d’une solution digitale ? Présentez-moi votre besoin et
+            échangeons pour construire une solution adaptée à votre projet.
           </p>
 
           <!-- Section line -->
           <div
-            class="mx-auto mt-5 h-[3px] w-[70px] rounded-full bg-gradient-to-r from-cyan-400 to-violet-500"
+            class="mx-auto mt-5 h-[3px] w-[70px] rounded-full bg-gradient-to-r from-cyan-400 to-blue-500"
           ></div>
 
         </div>
@@ -56,7 +55,7 @@
           <!-- CONTACT INFO -->
           <div class="space-y-5">
 
-            <!-- WhatsApp -->
+            <!-- WHATSAPP -->
             <div
               class="flex items-center gap-4 rounded-[20px] border border-cyan-400/10 bg-[rgba(8,16,31,.72)] p-5 backdrop-blur-xl transition duration-300 hover:translate-x-1 hover:border-cyan-400/35 hover:shadow-[0_0_30px_rgba(34,211,238,.05)]"
             >
@@ -86,7 +85,7 @@
                 </p>
 
                 <p class="mt-1 text-sm text-gray-200">
-                  Disponible pour discuter
+                  Contact direct et rapide
                 </p>
               </div>
 
@@ -180,7 +179,7 @@
                 </p>
 
                 <p class="mt-1 text-sm text-gray-200">
-                  Tunisie
+                  Tunisie · Disponible à distance
                 </p>
               </div>
 
@@ -189,7 +188,7 @@
 
             <!-- AVAILABILITY -->
             <div
-              class="flex items-center gap-3 rounded-[20px] border border-cyan-400/12 bg-gradient-to-br from-cyan-400/6 to-violet-500/5 p-5"
+              class="flex items-center gap-3 rounded-[20px] border border-cyan-400/12 bg-gradient-to-br from-cyan-400/6 to-blue-500/5 p-5"
             >
 
               <span
@@ -202,7 +201,7 @@
                 </p>
 
                 <p class="mt-1 text-sm text-gray-500">
-                  N'hésitez pas à me contacter.
+                  Sites web, applications et solutions digitales.
                 </p>
               </div>
 
@@ -220,16 +219,16 @@
             <div class="mb-8">
 
               <p class="text-sm font-medium text-cyan-400">
-                Envoyez-moi un message
+                Bilel Harbegue
               </p>
 
               <h2 class="mt-2 text-2xl font-bold md:text-3xl">
-                Parlons de votre idée
+                Parlons de votre projet
               </h2>
 
               <p class="mt-3 text-sm text-gray-500">
-                Remplissez le formulaire puis choisissez
-                WhatsApp ou Gmail pour envoyer votre message.
+                Décrivez votre projet, votre besoin ou votre idée.
+                Je vous répondrai directement par WhatsApp ou par email.
               </p>
 
             </div>
@@ -303,7 +302,7 @@
               <textarea
                 v-model="form.message"
                 rows="6"
-                placeholder="Décrivez votre projet..."
+                placeholder="Décrivez votre projet ou votre besoin..."
                 class="w-full resize-none rounded-xl border border-white/8 bg-white/[.025] px-[15px] py-[13px] text-white outline-none transition duration-300 placeholder:text-gray-600 focus:border-cyan-400/50 focus:bg-cyan-400/[.025] focus:shadow-[0_0_20px_rgba(34,211,238,.05)]"
               ></textarea>
 
@@ -347,7 +346,7 @@
               <button
                 type="button"
                 @click="sendWhatsApp"
-                class="flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-gradient-to-br from-cyan-400 to-violet-500 px-[18px] py-3.5 font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(34,211,238,.25)]"
+                class="flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 px-[18px] py-3.5 font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_30px_rgba(34,211,238,.25)]"
               >
 
                 <svg
@@ -405,8 +404,8 @@
               class="mt-5 text-center text-xs text-gray-600"
             >
               Aucun backend nécessaire.
-              Votre message est envoyé via votre application
-              de messagerie ou WhatsApp.
+              Votre message est préparé puis envoyé directement
+              via WhatsApp ou Gmail.
             </p>
 
           </div>
@@ -439,13 +438,13 @@
           <div class="relative z-10">
 
             <p class="mb-3 font-medium text-cyan-400">
-              Merci pour votre visite
+              Bilel Harbegue · Frontend Web Developer
             </p>
 
             <h2 class="text-3xl font-bold md:text-4xl">
               Construisons quelque chose
               <span
-                class="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent"
+                class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
               >
                 d'exception.
               </span>
@@ -454,16 +453,15 @@
             <p
               class="mx-auto mt-5 max-w-xl leading-relaxed text-gray-400"
             >
-              Une idée, un projet ou simplement
-              une question ? Je serais ravi d'échanger
-              avec vous.
+              Une idée, un projet web ou simplement une question ?
+              Échangeons ensemble et donnons vie à votre projet.
             </p>
 
 
             <button
               type="button"
               @click="openWhatsApp"
-              class="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500 px-7 py-3 font-semibold transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#22d3ee]"
+              class="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 px-7 py-3 font-semibold transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#22d3ee]"
             >
 
               <svg
@@ -588,6 +586,8 @@ Bonjour,
 
 Je souhaite vous contacter concernant un projet web.
 
+Je viens de consulter le portfolio de Bilel Harbegue et je souhaiterais échanger avec vous au sujet de mon projet.
+
 Merci.
   `.trim()
 
@@ -628,7 +628,7 @@ Je m'appelle ${form.name}.
 
 Email : ${form.email}
 
-Sujet : ${form.subject || 'Contact depuis mon portfolio'}
+Sujet : ${form.subject || 'Contact depuis le portfolio de Bilel Harbegue'}
 
 Message :
 
@@ -643,7 +643,7 @@ ${form.name}
 
 const openGmail = () => {
 
-  const subject = 'Contact depuis mon portfolio'
+  const subject = 'Contact depuis le portfolio de Bilel Harbegue'
 
   const body =
     'Bonjour, je souhaite vous contacter concernant un projet web.'
@@ -661,7 +661,7 @@ const sendGmail = () => {
   if (!validateForm()) return
 
   const subject =
-    form.subject || 'Contact depuis mon portfolio'
+    form.subject || 'Contact depuis le portfolio de Bilel Harbegue'
 
   const body =
     createEmailBody()
@@ -676,4 +676,3 @@ const sendGmail = () => {
 }
 
 </script>
-```

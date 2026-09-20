@@ -13,7 +13,7 @@
 
     <div
       class="absolute bottom-0 right-0 w-80 h-80
-             bg-violet-600/10 rounded-full blur-[120px]"
+             bg-blue-600/10 rounded-full blur-[120px]"
     ></div>
 
 
@@ -37,7 +37,7 @@
         <!-- Ligne décorative -->
         <div
           class="w-20 h-1 mx-auto mt-5 rounded-full
-                 bg-gradient-to-r from-cyan-400 to-violet-500"
+                 bg-gradient-to-r from-cyan-400 to-blue-500"
         ></div>
 
       </div>
@@ -57,10 +57,10 @@
                    mb-6 leading-tight"
           >
 
-            Je transforme les idées en
+            Je crée des interfaces web pensées pour être
 
             <span class="text-cyan-400">
-              solutions digitales.
+              belles, intuitives et efficaces.
             </span>
 
           </h3>
@@ -69,18 +69,19 @@
           <!-- Présentation personnelle -->
           <p class="text-gray-400 leading-relaxed mb-5">
 
-            Je suis un développeur Full-Stack passionné par
-            la conception et le développement d'applications web
-            modernes et performantes.
+            Je suis Bilel Harbegue, développeur web spécialisé
+            dans la conception et le développement d'interfaces
+            modernes et responsives.
 
           </p>
 
 
           <p class="text-gray-400 leading-relaxed mb-8">
 
-            J'aime transformer des besoins réels en solutions
-            simples, efficaces et intuitives, en combinant
-            développement, design et nouvelles technologies.
+            J'aime transformer des idées et des besoins concrets
+            en expériences web claires, accessibles et agréables
+            à utiliser, en accordant une attention particulière
+            au design, à l'expérience utilisateur et aux détails.
 
           </p>
 
@@ -108,7 +109,7 @@
                        rounded-xl
                        text-cyan-400
                        bg-gradient-to-br
-                       from-cyan-400/12 to-violet-500/12
+                       from-cyan-400/12 to-blue-500/12
                        border border-cyan-400/15
                        transition duration-300
                        group-hover:scale-105"
@@ -147,7 +148,7 @@
                 <span
                   class="block text-gray-300 text-sm"
                 >
-                  Développeur Full-Stack
+                  Frontend Web Developer
                 </span>
 
               </div>
@@ -172,7 +173,7 @@
                        rounded-xl
                        text-cyan-400
                        bg-gradient-to-br
-                       from-cyan-400/12 to-violet-500/12
+                       from-cyan-400/12 to-blue-500/12
                        border border-cyan-400/15
                        transition duration-300
                        hover:scale-105"
@@ -219,7 +220,7 @@
                 <span
                   class="block text-gray-300 text-sm"
                 >
-                  Applications Web
+                  Interfaces Web
                 </span>
 
               </div>
@@ -244,7 +245,7 @@
                        rounded-xl
                        text-cyan-400
                        bg-gradient-to-br
-                       from-cyan-400/12 to-violet-500/12
+                       from-cyan-400/12 to-blue-500/12
                        border border-cyan-400/15
                        transition duration-300
                        hover:scale-105"
@@ -283,7 +284,7 @@
                 <span
                   class="block text-gray-300 text-sm"
                 >
-                  Vue.js · Django
+                  Vue.js · JavaScript
                 </span>
 
               </div>
@@ -308,7 +309,7 @@
                        rounded-xl
                        text-cyan-400
                        bg-gradient-to-br
-                       from-cyan-400/12 to-violet-500/12
+                       from-cyan-400/12 to-blue-500/12
                        border border-cyan-400/15
                        transition duration-300
                        hover:scale-105"
@@ -352,7 +353,7 @@
                 <span
                   class="block text-gray-300 text-sm"
                 >
-                  Moderne & orientée solution
+                  Design & Expérience utilisateur
                 </span>
 
               </div>
@@ -382,7 +383,7 @@
             <div
               class="absolute -top-10 -right-10
                      w-32 h-32
-                     bg-cyan-400/10
+                     bg-blue-400/10
                      rounded-full blur-3xl"
             ></div>
 
@@ -397,7 +398,7 @@
                        rounded-2xl
                        bg-gradient-to-br
                        from-cyan-400/20
-                       to-violet-500/20
+                       to-blue-500/20
                        border border-cyan-400/20
                        text-cyan-400
                        shadow-[0_0_25px_rgba(34,211,238,.12)]"
@@ -426,17 +427,17 @@
 
               <!-- Titre -->
               <h3 class="text-2xl font-bold mb-4">
-                Full-Stack Developer
+                Frontend Web Developer
               </h3>
 
 
               <!-- Description -->
               <p class="text-gray-400 leading-relaxed">
 
-                Du frontend au backend, je développe des
-                applications complètes avec une attention
-                particulière portée à l'expérience utilisateur,
-                aux performances et à la qualité du code.
+                Je conçois et développe des interfaces web
+                modernes, responsives et intuitives, avec une
+                attention particulière portée au design,
+                à l'expérience utilisateur et à la qualité du code.
 
               </p>
 
@@ -469,7 +470,7 @@
                          hover:border-cyan-400/35
                          hover:shadow-[0_0_15px_rgba(34,211,238,.12)]"
                 >
-                Tailwind css
+                  JavaScript
                 </span>
 
                 <span
@@ -483,7 +484,7 @@
                          hover:border-cyan-400/35
                          hover:shadow-[0_0_15px_rgba(34,211,238,.12)]"
                 >
-                Django
+                  HTML
                 </span>
 
                 <span
@@ -497,7 +498,21 @@
                          hover:border-cyan-400/35
                          hover:shadow-[0_0_15px_rgba(34,211,238,.12)]"
                 >
-                  SQL
+                  CSS
+                </span>
+
+                <span
+                  class="px-3 py-1.5 rounded-full
+                         bg-cyan-400/8
+                         border border-cyan-400/15
+                         text-cyan-300 text-[13px]
+                         transition duration-300
+                         hover:-translate-y-0.5
+                         hover:bg-cyan-400/14
+                         hover:border-cyan-400/35
+                         hover:shadow-[0_0_15px_rgba(34,211,238,.12)]"
+                >
+                  Tailwind CSS
                 </span>
 
               </div>
@@ -524,7 +539,7 @@
                 ></span>
 
                 <span class="text-sm text-gray-400">
-                  Disponible pour de nouveaux projets
+                  Ouvert aux opportunités et collaborations
                 </span>
 
               </div>

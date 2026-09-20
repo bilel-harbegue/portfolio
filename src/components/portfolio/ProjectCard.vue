@@ -343,22 +343,21 @@
 
         <!-- ================= DETAILS ================= -->
 
-        <button
-          type="button"
+        <button 
+  type="button" 
 
-          @click="$emit('details', projet)"
+  @click="$emit('details', projet)" 
 
-          class="text-cyan-400
-                 text-sm
-                 font-semibold
+  class="text-cyan-400 
+         text-sm 
+         font-semibold 
 
-                 hover:text-violet-400
+         hover:text-cyan-300
 
-                 transition"
-        >
-          Détails →
-        </button>
-
+         transition"
+>
+  Détails →
+</button>
 
         <!-- ================= DEMO ================= -->
 

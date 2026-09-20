@@ -1,11 +1,12 @@
 <template>
+
   <section class="relative py-24 bg-[#050816] text-white overflow-hidden">
 
     <!-- ================= Effets lumineux ================= -->
 
     <div
       class="absolute top-10 right-0 w-80 h-80
-             bg-violet-600/10 rounded-full blur-[120px]"
+             bg-blue-600/10 rounded-full blur-[120px]"
     ></div>
 
     <div
@@ -35,12 +36,12 @@
 
         <div
           class="w-20 h-1 mx-auto mt-5 rounded-full
-                 bg-gradient-to-r from-cyan-400 to-violet-500"
+                 bg-gradient-to-r from-cyan-400 to-blue-500"
         ></div>
 
         <p class="max-w-2xl mx-auto mt-6 text-gray-400">
           Les technologies et outils que j'utilise pour concevoir
-          des applications web modernes et performantes.
+          des interfaces web modernes, responsives et performantes.
         </p>
 
       </div>
@@ -91,7 +92,7 @@
                    text-cyan-400
                    bg-gradient-to-br
                    from-cyan-400/12
-                   to-violet-500/12
+                   to-blue-500/12
                    border border-cyan-400/15
                    transition-transform duration-300
                    group-hover:scale-105
@@ -325,6 +326,7 @@
     </div>
 
   </section>
+
 </template>
 
 
@@ -339,7 +341,7 @@ const competences = [
     icon: 'frontend',
 
     description:
-      'Création d’interfaces modernes, responsives et interactives.',
+      'Conception d’interfaces modernes, responsives et interactives, avec une attention particulière portée à l’expérience utilisateur.',
 
     technologies: [
       'HTML',
@@ -356,11 +358,13 @@ const competences = [
     icon: 'backend',
 
     description:
-      'Développement d’API et de services web robustes et évolutifs.',
+      'Développement de fonctionnalités côté serveur et intégration de services web.',
 
     technologies: [
       'Django',
-      'PHP'
+      'PHP',
+      'Spring Boot',
+      'Python'
     ]
   },
 
@@ -370,10 +374,11 @@ const competences = [
     icon: 'database',
 
     description:
-      'Conception et gestion de bases de données adaptées aux applications.',
+      'Conception et gestion de bases de données adaptées aux besoins des applications web.',
 
     technologies: [
       'MySQL',
+      'PostgreSQL',
       'SQL'
     ]
   },
@@ -384,14 +389,14 @@ const competences = [
     icon: 'tools',
 
     description:
-      'Utilisation des outils modernes pour développer et maintenir les projets.',
+      'Utilisation d’outils modernes pour développer, tester et maintenir les projets web.',
 
     technologies: [
       'Git',
       'GitHub',
       'Postman',
       'Vite',
-      'Xampp'
+      'XAMPP'
     ]
   }
 

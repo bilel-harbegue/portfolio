@@ -1,4 +1,3 @@
-
 <template>
 
   <main
@@ -27,7 +26,7 @@
                w-[400px] h-[400px]
                bottom-0 -right-[150px]
                rounded-full
-               bg-violet-600/10
+               bg-blue-600/10
                blur-[140px]"
       ></div>
 
@@ -57,7 +56,7 @@
                  rounded-full
                  bg-gradient-to-r
                  from-cyan-400
-                 to-violet-500"
+                 to-blue-500"
         ></div>
 
         <p
@@ -66,8 +65,9 @@
                  mt-6
                  text-gray-400"
         >
-          Découvrez mes projets et les solutions que j'ai
-          développées avec des technologies modernes.
+          Découvrez une sélection de mes projets web,
+          réalisés dans le cadre de mes expériences professionnelles,
+          de ma formation et de mes projets personnels.
         </p>
 
       </header>
@@ -483,7 +483,7 @@
                    rounded-full
                    bg-gradient-to-r
                    from-cyan-400
-                   to-violet-500
+                   to-blue-600
                    text-[#050816]
                    font-semibold
                    text-sm
@@ -565,10 +565,10 @@ const projets = [
     categorie: 'PFE • CNI • 2025',
 
     description:
-      'Plateforme web intelligente destinée à faciliter la gestion des stages, des étudiants, des entreprises et des affectations.',
+      'Plateforme web intelligente destinée à faciliter la gestion des stages et à automatiser certaines étapes du processus d’affectation.',
 
     details:
-      'Projet de Fin d’Études réalisé au Centre National d’Informatique (CNI) en 2025. Le projet a été développé en binôme et consiste à concevoir une plateforme web permettant de centraliser et simplifier la gestion des stages. L’application permet de gérer les étudiants, les entreprises, les offres de stage, les utilisateurs et les rôles. Une partie du processus d’affectation et du traitement des informations a également été automatisée avec une assistance basée sur l’intelligence artificielle développée en Python.',
+      'Projet de Fin d’Études réalisé en binôme au Centre National d’Informatique (CNI) en 2025. L’objectif était de concevoir une plateforme web permettant de centraliser et simplifier la gestion des stages. L’application prend en charge différents profils tels que le bureau d’ordre, le responsable de stages, les encadreurs, les directeurs et les stagiaires. Une partie du traitement des CV et de l’affectation des stagiaires a également été assistée par des fonctionnalités basées sur l’intelligence artificielle développées en Python.',
 
     infos: [
 
@@ -578,7 +578,9 @@ const projets = [
 
       'Durée : 4 mois en 2025.',
 
-      'Python a été utilisé pour la partie Intelligence Artificielle.'
+      'Focus principal : conception et développement de l’interface frontend.',
+
+      'Python utilisé pour les fonctionnalités liées à l’Intelligence Artificielle.'
 
     ],
 
@@ -620,7 +622,7 @@ const projets = [
       'Application web permettant de gérer les fichiers, les utilisateurs, les permissions et les opérations CRUD.',
 
     details:
-      'Application web développée durant mon stage de perfectionnement chez Vikaspace en 2024. Le projet avait pour objectif de faciliter la gestion des fichiers au sein de l’application. J’ai participé au développement des fonctionnalités CRUD ainsi qu’à la gestion des utilisateurs et de leurs permissions. Un tableau de bord administrateur permet également de centraliser la gestion des données et des utilisateurs.',
+      'Application web développée durant mon stage de perfectionnement chez Vikaspace en 2024. Le projet avait pour objectif de faciliter la gestion des fichiers au sein de l’application. J’ai participé au développement des fonctionnalités CRUD ainsi qu’à la gestion des utilisateurs et de leurs permissions. Un tableau de bord administrateur permettait également de centraliser la gestion des données et des utilisateurs.',
 
     infos: [
 
@@ -669,10 +671,10 @@ const projets = [
     categorie: 'Projet personnel',
 
     description:
-      'Portfolio personnel moderne permettant de présenter mon parcours, mes compétences et mes réalisations.',
+      'Portfolio personnel moderne développé pour présenter mon profil, mes compétences, mes expériences et mes réalisations.',
 
     details:
-      'Portfolio personnel développé avec Vue.js 3, Vite et Tailwind CSS. Le site utilise une interface moderne inspirée des designs Web3 avec un thème sombre, des effets lumineux, des animations et une architecture organisée en plusieurs pages. L’objectif est de présenter mon profil, mes compétences, mes expériences et mes projets de manière claire et professionnelle.',
+      'Portfolio personnel développé avec Vue.js 3, Vite et Tailwind CSS. Le site utilise une interface moderne avec un thème sombre, des effets lumineux, des animations et une architecture organisée en plusieurs pages. L’objectif est de présenter mon profil professionnel et mes projets de manière claire, moderne et responsive.',
 
     infos: [
 
@@ -889,4 +891,3 @@ video {
 }
 
 </style>
-```
