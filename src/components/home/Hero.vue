@@ -155,7 +155,7 @@
           <div class="coin">  
   
             <img  
-              src="../../assets/images/14.png"  
+              src="../../assets/images/3rd_mark_logo.png"  
               alt="Bilel Harbegue - Frontend Web Developer"  
               class="hero-coin"  
             />  
@@ -188,7 +188,7 @@
           <span class="orbit-dot dot-3"></span>  
   
   
-          <!-- ================= B CUBE ================= -->  
+          <!-- ================= 3rd Mark ================= -->  
           <div  
             class="absolute bottom-[2%] left-1/2  
                    -translate-x-1/2 text-center z-20"  
@@ -199,7 +199,7 @@
                      tracking-[0.25em]  
                      text-cyan-400"  
             >  
-              B CUBE  
+              3rd Mark  
             </p>  
   
             <p  
@@ -207,7 +207,7 @@
                      uppercase tracking-[0.3em]  
                      text-gray-500"  
             >  
-              Digital Solutions  
+              Your Digital Mark  
             </p>  
   
           </div>  
@@ -368,8 +368,8 @@ onUnmounted(() => clearTimeout(timer))
   position: relative;  
   z-index: 10;  
   
-  width: 290px;  
-  height: 290px;  
+  width: 450px;
+  height: 450px; 
   
   display: flex;  
   align-items: center;  

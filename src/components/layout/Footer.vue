@@ -14,7 +14,7 @@
         <span
           class="ml-1 font-semibold text-cyan-400 transition-colors duration-300 hover:text-blue-400"
         >
-          B Cube
+        3rd Mark 
         </span>
       </p>
 
