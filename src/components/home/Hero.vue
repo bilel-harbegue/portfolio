@@ -155,7 +155,7 @@
           <div class="coin">  
   
             <img  
-              src="../../assets/images/3rd_mark_logo.png"  
+              src="../../assets/images/3rd_mark1 (1).png"  
               alt="Bilel Harbegue - Frontend Web Developer"  
               class="hero-coin"  
             />  
@@ -368,8 +368,8 @@ onUnmounted(() => clearTimeout(timer))
   position: relative;  
   z-index: 10;  
   
-  width: 450px;
-  height: 450px; 
+  width: 350px;
+  height: 350px; 
   
   display: flex;  
   align-items: center;  
