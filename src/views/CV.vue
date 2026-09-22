@@ -1135,6 +1135,13 @@
 
 
 <script setup>
+import { useSEO } from '../composables/useSEO'
+useSEO({
+  title: 'CV | Bilel Harbegue - Développeur Web',
+  description:
+    'Consultez le CV de Bilel Harbegue, développeur web spécialisé dans la conception et le développement de solutions web modernes.',
+  canonical: 'https://bilel-harbegue.vercel.app/cv'
+})
 
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'

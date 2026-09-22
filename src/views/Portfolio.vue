@@ -515,6 +515,17 @@
 
 
 <script setup>
+import { useSEO } from '../composables/useSEO'
+
+/* tes autres imports */
+
+useSEO({
+  title: 'Portfolio | Bilel Harbegue',
+  description:
+    'Découvrez les projets web de Bilel Harbegue : interfaces modernes, applications web et solutions digitales développées avec des technologies modernes.',
+  canonical: 'https://bilel-harbegue.vercel.app/portfolio'
+})
+
 
 import { ref, nextTick } from 'vue'
 

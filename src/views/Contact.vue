@@ -496,6 +496,13 @@
 
 
 <script setup>
+import { useSEO } from '../composables/useSEO'
+useSEO({
+  title: 'Contact | Bilel Harbegue',
+  description:
+    'Contactez Bilel Harbegue pour discuter d’un projet web, d’une interface moderne ou d’une solution digitale.',
+  canonical: 'https://bilel-harbegue.vercel.app/contact'
+})
 
 import { reactive, ref } from 'vue'
 
